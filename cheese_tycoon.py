@@ -3,5 +3,5 @@ import tkinter as tk
 root = tk.Tk()
 T = tk.Text(root, height=2, width=30)
 T.pack()
-T.insert(tk.END, "Just a text Widget\nin two lines\n")
+T.insert(tk.END, 'What do you want to do?')
 tk.mainloop()
