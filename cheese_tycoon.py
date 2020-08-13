@@ -2,11 +2,8 @@
 import PySimpleGUI as sg
 import time
 # Other Script Resources
-import cheesetycoon_resources
+import cheesetycoon_variables
 import cheesetycoon_functions
-
-# Variables
-current_command = ''
 
 # Gui Layout
 layout = [  [sg.Output(size=(50,10), key='-OUTPUT-')],
