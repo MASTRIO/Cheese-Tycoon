@@ -12,4 +12,9 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('You have', cheesetycoon_resources.CHEESE, '🧀 in your wallet')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+   if str == '/admin add 10':
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print('10 🧀 has been added to ya wallet 🍪')
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        cheesetycoon_resources.CHEESE = cheesetycoon_resources.CHEESE + 10
    return
