@@ -5,14 +5,18 @@ import time
 import JustAnotherDay_variables
 import JustAnotherDay_functions
 
+# Set Theme
+sg.theme('NeutralBlue')
 # Gui Layout
-layout = [  [sg.Output(size=(50,10), key='-OUTPUT-')],
+layout = [  [sg.Output(size=(50,25), key='-OUTPUT-')],
+            [sg.Button('Clear Output')],
+            [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
             [sg.Text('What do you want to do?')],
             [sg.InputText(do_not_clear=False, tooltip='Type /help for command list')],
             [sg.Button('Run Command'), sg.Button('Close')]  ]
 
 # Opens Gui
-window = sg.Window('Just Another Day', layout)
+window = sg.Window('Just Another Day v0.1', layout)
 
 # Runs when Gui is open
 while True:
@@ -20,6 +24,8 @@ while True:
     # Runs when CLOSE is pressed
     if event in (sg.WIN_CLOSED, 'Close'):
         break
+    if event == 'Clear Output':
+        window['-OUTPUT-'].update('')
     ## Runs when RUN COMMAND is pressed
     # Set Current_command variable to command to run
     current_command = values[0]
