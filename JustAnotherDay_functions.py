@@ -1,4 +1,4 @@
-import cheesetycoon_variables
+import JustAnotherDay_variables
 
 def COMMAND_CHECK(str):
    "Command Input Goes Here!"
@@ -9,11 +9,11 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
    if str == '/balance':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        print('You have', cheesetycoon_variables.CHEESE, '🧀 in your wallet')
+        print('You have', JustAnotherDay_variables.CHEESE, '🧀 in your wallet')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
    if str == '/admin add 10':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('10 🧀 has been added to ya wallet')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        cheesetycoon_variables.CHEESE = cheesetycoon_variables.CHEESE + 10
+        JustAnotherDay_variables.CHEESE = JustAnotherDay_variables.CHEESE + 10
    return

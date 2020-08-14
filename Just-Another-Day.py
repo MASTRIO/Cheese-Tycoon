@@ -2,8 +2,8 @@
 import PySimpleGUI as sg
 import time
 # Other Script Resources
-import cheesetycoon_variables
-import cheesetycoon_functions
+import JustAnotherDay_variables
+import JustAnotherDay_functions
 
 # Gui Layout
 layout = [  [sg.Output(size=(50,10), key='-OUTPUT-')],
@@ -12,7 +12,7 @@ layout = [  [sg.Output(size=(50,10), key='-OUTPUT-')],
             [sg.Button('Run Command'), sg.Button('Close')]  ]
 
 # Opens Gui
-window = sg.Window('Cheese Tycoon', layout)
+window = sg.Window('Just Another Day', layout)
 
 # Runs when Gui is open
 while True:
@@ -24,7 +24,7 @@ while True:
     # Set Current_command variable to command to run
     current_command = values[0]
     # Checks what command you just ran and executes an action if the correct command is entered
-    cheesetycoon_functions.COMMAND_CHECK(values[0])
+    JustAnotherDay_functions.COMMAND_CHECK(values[0])
 
 # Close Gui
 window.close()
