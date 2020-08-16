@@ -10,8 +10,8 @@ base = None
 if sys.platform == "win64":
     base = "Win64GUI"
 
-setup(  name = "Just Another Day",
+setup(  name = "Just Another Game About Cheese",
         version = "0.1",
         description = "A game about CHEESE",
         options = {"build_exe": build_exe_options},
-        executables = [Executable("Just-Another-Day.py", base=base)])
+        executables = [Executable("JustAnotherGameAboutCheese.py", base=base)])

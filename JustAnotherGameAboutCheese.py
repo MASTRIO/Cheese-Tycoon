@@ -2,8 +2,8 @@
 import PySimpleGUI as sg
 import time
 # Other Script Resources
-import JustAnotherDay_variables
-import JustAnotherDay_functions
+import JAGAC_variables
+import JAGAC_functions
 
 # Set Theme
 sg.theme('NeutralBlue')
@@ -30,7 +30,7 @@ while True:
     # Set Current_command variable to command to run
     current_command = values[0]
     # Checks what command you just ran and executes an action if the correct command is entered
-    JustAnotherDay_functions.COMMAND_CHECK(values[0])
+    JAGAC_functions.COMMAND_CHECK(values[0])
 
 # Close Gui
 window.close()
