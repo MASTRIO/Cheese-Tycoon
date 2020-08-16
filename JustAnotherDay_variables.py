@@ -2,9 +2,5 @@
 CHEESE = 500
 
 # Resources/Materials
-
-
-# Buildings/Constructions
-
-
-# Other
+resourceSHINY_GEMS = 0
+resourceCHEESE_JUMPER = 0
