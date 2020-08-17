@@ -1,6 +1,7 @@
 ## Import Stuff
 import PySimpleGUI as sg
 import time
+import keyboard
 # Other Script Resources
 import JAGAC_variables
 import JAGAC_functions
@@ -23,14 +24,14 @@ while True:
     event, values = window.read()
     # Runs when CLOSE is pressed
     if event in (sg.WIN_CLOSED, 'Close'):
+        time.sleep(1)
         break
     if event == 'Clear Output':
         window['-OUTPUT-'].update('')
     ## Runs when RUN COMMAND is pressed
-    # Set Current_command variable to command to run
-    current_command = values[0]
     # Checks what command you just ran and executes an action if the correct command is entered
-    JAGAC_functions.COMMAND_CHECK(values[0])
+    if event in ('Run Command'):
+        JAGAC_functions.COMMAND_CHECK(values[0])
 
-# Close Gui
+# Closes Gui and game
 window.close()

@@ -17,12 +17,13 @@ def COMMAND_CHECK(str):
    # Inventory command
    if str == '/inventory':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print('Here is everything in your inventory:')
         if JAGAC_variables.resourceSHINY_GEMS > 0:
-             print('[💎] Shiny Gems =', JAGAC_variables.resourceSHINY_GEMS)
+             print('[✨💎] Shiny Gems =', JAGAC_variables.resourceSHINY_GEMS)
         if JAGAC_variables.resourceCHEESE_JUMPER > 0:
-             print('[🥋] Cheese Jumpers =', JAGAC_variables.resourceCHEESE_JUMPER)
+             print('[🧀🥋] Cheese Jumpers =', JAGAC_variables.resourceCHEESE_JUMPER)
         if JAGAC_variables.resourceBLUE_CHEESE > 0:
-             print('[🟦🧀] Blue Cheese =', JAGAC_variables.resourceBLUE_CHEESE)
+             print('[Ƀ🧀] Blue Cheese =', JAGAC_variables.resourceBLUE_CHEESE)
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
    # Testing add random command
    if str == '/testing add random':
