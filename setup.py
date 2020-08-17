@@ -14,4 +14,4 @@ setup(  name = "Just Another Game About Cheese",
         version = "0.1",
         description = "A game about CHEESE",
         options = {"build_exe": build_exe_options},
-        executables = [Executable("JustAnotherGameAboutCheese.py", base=base)])
+        executables = [Executable("JustAnotherGameAboutCheese.pyw", base=base)])
