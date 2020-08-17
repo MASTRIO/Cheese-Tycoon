@@ -1,6 +1,9 @@
+# Import Stuff
 import JAGAC_variables
+import JAGAC_sell_window
 import random
 
+# Command check function
 def COMMAND_CHECK(str):
    "Command Input Goes Here!"
    # Help command
@@ -25,7 +28,13 @@ def COMMAND_CHECK(str):
         if JAGAC_variables.resourceBLUE_CHEESE > 0:
              print('[Ƀ🧀] Blue Cheese =', JAGAC_variables.resourceBLUE_CHEESE)
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-   # Testing add random command
+   # Sell command
+   if str == '/sell':
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print('Opening Sell Menu!')
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        JAGAC_sell_window.OPEN_SELL_WINDOW()
+   # Testing add random amount of cheese command
    if str == '/testing add random':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('A random amount of 🧀 has been added to ya wallet')
