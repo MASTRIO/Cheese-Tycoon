@@ -33,7 +33,7 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Sell Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        JAGAC_sell_window.OPEN_SELL_WINDOW()
+        
    if str == '/settings':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Settings Menu!')
