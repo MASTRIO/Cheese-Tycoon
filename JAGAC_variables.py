@@ -1,3 +1,6 @@
+# Settings
+GUI_THEME = 'NeutralBlue'
+
 # Currency
 CHEESE = 50
 

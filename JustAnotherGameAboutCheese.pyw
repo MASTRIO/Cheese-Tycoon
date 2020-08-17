@@ -7,7 +7,7 @@ import JAGAC_variables
 import JAGAC_functions
 
 # Set Theme
-sg.theme('NeutralBlue')
+sg.theme(JAGAC_variables.GUI_THEME)
 # Gui Layout
 layout = [  [sg.Output(size=(50,25), key='-OUTPUT-')],
             [sg.Button('Clear Output')],
