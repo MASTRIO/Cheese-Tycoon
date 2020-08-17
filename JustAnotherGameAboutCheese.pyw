@@ -14,7 +14,7 @@ layout = [  [sg.Output(size=(50,25), key='-OUTPUT-')],
             [sg.Button('Clear Output')],
             [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
             [sg.Text('What do you want to do?')],
-            [sg.InputText(do_not_clear=False, tooltip='Type /help for command list')],
+            [sg.InputText(do_not_clear=False, tooltip='Type /help for a list of commands')],
             [sg.Button('Run Command'), sg.Button('Close')]  ]
 
 # Opens Gui
