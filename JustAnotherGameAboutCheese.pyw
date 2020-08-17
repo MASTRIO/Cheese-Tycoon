@@ -24,7 +24,8 @@ while True:
     event, values = window.read()
     # Runs when CLOSE is pressed
     if event in (sg.WIN_CLOSED, 'Close'):
-        time.sleep(1)
+        print('Goodbye :(')
+        time.sleep(0.5)
         break
     if event == 'Clear Output':
         window['-OUTPUT-'].update('')
