@@ -1,6 +1,5 @@
 # Import Stuff
 import JAGAC_variables
-import JAGAC_sell_window
 import random
 
 # Command check function
@@ -10,7 +9,7 @@ def COMMAND_CHECK(str):
    if str == '/help':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Here is a list of commands:')
-        print('/help\n/balance\n/inventory\n/testing add resources')
+        print('/help\n/balance\n/inventory\n/sell\n/settings\n/testing add resources')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
    # Balance command
    if str == '/balance':
@@ -33,7 +32,6 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Sell Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        
    if str == '/settings':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Settings Menu!')
