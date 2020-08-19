@@ -9,7 +9,10 @@ def COMMAND_CHECK(str):
    if str == '/help':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Here is a list of commands:')
-        print('/help\n/balance\n/inventory\n/sell\n/settings\n/testing add resources')
+        print('> /help\n> /balance\n> /inventory\n> /sell\n> /settings')
+        print('--------------------------------------------------------------------------------------')
+        print('Testing/Temporary Commands:')
+        print('> /testing add resources')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
    # Balance command
    if str == '/balance':
