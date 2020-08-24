@@ -1,6 +1,7 @@
 # Import Stuff
 import JAGAC_variables
 import random
+import PySimpleGUI as sg
 
 # Command check function
 def COMMAND_CHECK(str):
@@ -40,6 +41,10 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Settings Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        layout2 = [[sg.Text('Window 2')],
+                   [sg.Button('Exit')]]
+
+        win2 = sg.Window('Window 2', layout2)
 ## Testing Commands
    # Add 2 of every resource command
    if str == '/testing add resources':
