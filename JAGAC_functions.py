@@ -39,7 +39,7 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         layout2 = [[ sg.Text('Window 2') ],
                    [sg.Input('')],
-                   [ sg.Button('Read')]]
+                   [ sg.Button('Close')]]
 
         window2 = sg.Window('My new window', layout2, location=(800, 625), return_keyboard_events=True)
 
@@ -47,9 +47,8 @@ def COMMAND_CHECK(str):
                event, values = window2.read()
                # Runs when CLOSE is pressed
                if event in (sg.WIN_CLOSED, 'Close'):
-                    print('Goodbye :(')
                     time.sleep(0.5)
-                    break
+                    window2.close()
    # Settings command
    if str == '/settings':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
