@@ -15,7 +15,7 @@ layout1 = [ [sg.Output(size=(50,25), key='-OUTPUT-')],
             [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
             [sg.Text('What do you want to do?')],
             [sg.InputText(do_not_clear=False, tooltip='Type /help for a list of commands')],
-            [sg.Button('Run Command'), sg.Button('Close')]  ]
+            [sg.Button('Run Command')]]
 
 # Opens Gui
 window1 = sg.Window('Just Another Game About Cheese', layout1)
@@ -24,7 +24,7 @@ window1 = sg.Window('Just Another Game About Cheese', layout1)
 while True:
     event, values = window1.read()
     # Runs when CLOSE is pressed
-    if event in (sg.WIN_CLOSED, 'Close'):
+    if event in (sg.WIN_CLOSED):
         print('Goodbye :(')
         time.sleep(0.5)
         break
