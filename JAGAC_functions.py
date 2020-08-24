@@ -41,10 +41,6 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Settings Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        layout2 = [[sg.Text('Window 2')],
-                   [sg.Button('Exit')]]
-
-        win2 = sg.Window('Window 2', layout2)
 ## Testing Commands
    # Add 2 of every resource command
    if str == '/testing add resources':
