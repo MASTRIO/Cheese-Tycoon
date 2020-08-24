@@ -45,7 +45,6 @@ def COMMAND_CHECK(str):
           if str == '/sell':
                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                print('Opening Sell Menu!')
-               print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                OPEN_SELL_MENU()
           # Settings command
           if str == '/settings':
@@ -64,7 +63,7 @@ def COMMAND_CHECK(str):
                JAGAC_variables.resourceBLUE_CHEESE = JAGAC_variables.resourceBLUE_CHEESE + random.randint(3,150)
           return
      if JAGAC_variables.CAN_RUN_COMMAND == False:
-          SELL_MENU_COMMAND_CHECK()
+          SELL_MENU_COMMAND_CHECK(str)
 
 # Open sell menu function
 def OPEN_SELL_MENU():
@@ -73,10 +72,17 @@ def OPEN_SELL_MENU():
      return
 
 # Sell menu command checker
-def SELL_MENU_COMMAND_CHECK():
-     
+def SELL_MENU_COMMAND_CHECK(str):
+     if str == '/help':
+          print('Here is a list of commands for the sell menu:')
+          print('> /help\n> /close')
+     if str == '/close':
+          CLOSE_SELL_MENU()
      return
 
 # Close sell menu function
 def CLOSE_SELL_MENU():
+     JAGAC_variables.CAN_RUN_COMMAND = True
+     print('Closing the sell menu!')
+     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
      return
