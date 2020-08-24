@@ -66,7 +66,6 @@ def COMMAND_CHECK(str):
 # Open sell menu function
 def OPEN_SELL_MENU():
      JAGAC_variables.CAN_RUN_COMMAND = False
-     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
      return
 
 # Sell menu command checker
