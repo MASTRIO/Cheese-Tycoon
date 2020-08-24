@@ -73,19 +73,18 @@ def SELL_MENU_COMMAND_CHECK(str):
      # Sell menu command list
      if str == '/help':
           print('Here is a list of commands for the sell menu:')
-          print('> /help\n> /close')
+          print('> /help\n> /close\n> /sell <item name>\n > /sell?')
+     # List of what you can sell
+     if str == '/sell?':
+          print('Here is a list of what you can sell')
+          print('The list is based on what you have')
      # Close the sell menu
      if str == '/close':
-          CLOSE_SELL_MENU()
+          JAGAC_variables.CAN_RUN_COMMAND = True
+          print('Closing the sell menu!')
+          print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
      ## Sell items
      # Shiny Gems
      if str == '/sell shiny gem':
           print('No U')
-     return
-
-# Close sell menu function
-def CLOSE_SELL_MENU():
-     JAGAC_variables.CAN_RUN_COMMAND = True
-     print('Closing the sell menu!')
-     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
      return
