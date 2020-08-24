@@ -4,6 +4,9 @@ import random
 import PySimpleGUI as sg
 import time
 
+# Variables
+GameVersion = 'v0.1'
+
 # Command check function
 def COMMAND_CHECK(str):
    "Command Input Goes Here!"
@@ -11,10 +14,16 @@ def COMMAND_CHECK(str):
    if str == '/help':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Here is a list of commands:')
-        print('> /help\n> /balance\n> /inventory\n> /sell\n> /settings')
+        print('> /help\n> /version\n> /balance\n> /inventory\n> /sell\n> /settings')
         print('--------------------------------------------------------------------------------------')
         print('Testing/Temporary Commands:')
         print('> /testing add resources')
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+   # Version command
+   if str == '/version':
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print('JAGAC:')
+        print('Version', GameVersion)
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
    # Balance command
    if str == '/balance':
@@ -41,7 +50,7 @@ def COMMAND_CHECK(str):
                    [sg.Input('')],
                    [ sg.Button('Close')]]
 
-        window2 = sg.Window('My new window', layout2, location=(800, 625), return_keyboard_events=True)
+        window2 = sg.Window('JAGAC - Sell Menu', layout2, location=(800, 625), return_keyboard_events=True)
 
         while True:
                event, values = window2.read()

@@ -18,7 +18,7 @@ layout1 = [  [sg.Output(size=(50,25), key='-OUTPUT-')],
             [sg.Button('Run Command'), sg.Button('Close')]  ]
 
 # Opens Gui
-window1 = sg.Window('Just Another Game About Cheese - v0.1', layout1)
+window1 = sg.Window('Just Another Game About Cheese', layout1)
 
 # Runs when Gui is open
 while True:
