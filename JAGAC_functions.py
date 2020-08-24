@@ -2,6 +2,7 @@
 import JAGAC_variables
 import random
 import PySimpleGUI as sg
+import time
 
 # Command check function
 def COMMAND_CHECK(str):
@@ -36,6 +37,19 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Sell Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        layout2 = [[ sg.Text('Window 2') ],
+                   [sg.Input('')],
+                   [ sg.Button('Read')]]
+
+        window2 = sg.Window('My new window', layout2, location=(800, 625), return_keyboard_events=True)
+
+        while True:
+               event, values = window2.read()
+               # Runs when CLOSE is pressed
+               if event in (sg.WIN_CLOSED, 'Close'):
+                    print('Goodbye :(')
+                    time.sleep(0.5)
+                    break
    # Settings command
    if str == '/settings':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
