@@ -78,6 +78,12 @@ def SELL_MENU_COMMAND_CHECK(str):
      if str == '/sell?':
           print('Here is a list of what you can sell')
           print('The list is based on what you have')
+          if JAGAC_variables.resourceSHINY_GEMS > 0:
+               print('> [✨💎] shiny gem')
+          if JAGAC_variables.resourceCHEESE_JUMPER > 0:
+               print('> [🧀🥋] cheese jumper')
+          if JAGAC_variables.resourceBLUE_CHEESE > 0:
+               print('> [Ƀ🧀] blue cheese')
      # Close the sell menu
      if str == '/close':
           JAGAC_variables.CAN_RUN_COMMAND = True
