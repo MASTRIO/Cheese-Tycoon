@@ -24,9 +24,10 @@ window1 = sg.Window('Just Another Game About Cheese', layout1)
 while True:
     event, values = window1.read()
     # Runs when CLOSE is pressed
-    if event in (sg.WIN_CLOSED):
+    if event in (sg.WIN_CLOSED,):
         print('Goodbye :(')
         time.sleep(0.5)
+        window1.close()
         break
     if event == 'Clear Output':
         window1['-OUTPUT-'].update('')

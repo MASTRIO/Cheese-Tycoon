@@ -47,15 +47,14 @@ def COMMAND_CHECK(str):
         print('Opening Sell Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         layout2 = [[sg.Text('Welcome to the sell menu!')],
-                   [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
-                   [ sg.Button('Close Sell Menu')]]
+                  ]
 
-        window2 = sg.Window('JAGAC - Sell Menu', layout2, location=(800, 625), return_keyboard_events=True)
+        window2 = sg.Window('JAGAC - Sell Menu', layout2, location=(450, 115), return_keyboard_events=True)
 
         while True:
                event, values = window2.read()
                # Runs when CLOSE is pressed
-               if event in (sg.WIN_CLOSED, 'Close Sell Menu'):
+               if event in (sg.WIN_CLOSED,):
                     time.sleep(0.5)
                     window2.close()
    # Settings command
