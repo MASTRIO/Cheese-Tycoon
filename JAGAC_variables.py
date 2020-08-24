@@ -1,6 +1,9 @@
 # Settings
 GUI_THEME = 'NeutralBlue'
 
+# Background Stuff
+CAN_RUN_COMMAND = True
+
 # Currency
 CHEESE = 50
 
