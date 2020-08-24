@@ -35,10 +35,12 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Sell Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+   # Settings command
    if str == '/settings':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Settings Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+## Testing Commands
    # Add 2 of every resource command
    if str == '/testing add resources':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
