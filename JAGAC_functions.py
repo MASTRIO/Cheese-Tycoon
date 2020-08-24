@@ -46,7 +46,7 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Sell Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        layout2 = [[sg.Text('Welcome to the sell menu!')]
+        layout2 = [[sg.Text('Welcome to the sell menu!')],
                    [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
                    [ sg.Button('Close Sell Menu')]]
 
