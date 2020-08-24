@@ -10,7 +10,7 @@ import JAGAC_functions
 sg.theme(JAGAC_variables.GUI_THEME)
 
 # Main Gui Layout
-layout1 = [  [sg.Output(size=(50,25), key='-OUTPUT-')],
+layout1 = [ [sg.Output(size=(50,25), key='-OUTPUT-')],
             [sg.Button('Clear Output')],
             [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
             [sg.Text('What do you want to do?')],
