@@ -3,6 +3,7 @@ GUI_THEME = 'NeutralBlue'
 
 # Background Stuff
 CAN_RUN_COMMAND = True
+GAME_VERSION = 'v0.1'
 
 # Currency
 CHEESE = 50

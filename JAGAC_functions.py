@@ -4,8 +4,6 @@ import random
 import PySimpleGUI as sg
 import time
 
-# Variables
-GameVersion = 'v0.1'
 ## Functions
 # Command check function
 def COMMAND_CHECK(str):
@@ -23,7 +21,7 @@ def COMMAND_CHECK(str):
           if str == '/version':
                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                print('JAGAC:')
-               print('Version', GameVersion)
+               print('Version', JAGAC_variables.GAME_VERSION)
                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
           # Balance command
           if str == '/balance':
@@ -73,11 +71,17 @@ def OPEN_SELL_MENU():
 
 # Sell menu command checker
 def SELL_MENU_COMMAND_CHECK(str):
+     # Sell menu command list
      if str == '/help':
           print('Here is a list of commands for the sell menu:')
           print('> /help\n> /close')
+     # Close the sell menu
      if str == '/close':
           CLOSE_SELL_MENU()
+     ## Sell items
+     # Shiny Gems
+     if str == '/sell shiny gem':
+          print('No U')
      return
 
 # Close sell menu function
