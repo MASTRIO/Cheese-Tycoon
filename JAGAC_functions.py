@@ -46,9 +46,9 @@ def COMMAND_CHECK(str):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Sell Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        layout2 = [[ sg.Text('Window 2') ],
+        layout2 = [[],
                    [sg.Input('')],
-                   [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')]
+                   [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
                    [ sg.Button('Close')]]
 
         window2 = sg.Window('JAGAC - Sell Menu', layout2, location=(800, 625), return_keyboard_events=True)
