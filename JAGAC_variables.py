@@ -3,10 +3,7 @@ GUI_THEME = 'NeutralBlue'
 
 # Background Stuff
 CAN_RUN_MAIN_COMMANDS = True
-CHECKING_SELL_NUMBERS = False
-HOW_MUCH_TO_GAIN = 0
-WHAT_TO_SELL = ''
-GAME_VERSION = 'v0.1'
+GAME_VERSION = 'v0.2'
 
 # Currency
 CHEESE = 50

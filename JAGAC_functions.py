@@ -74,7 +74,7 @@ def SELL_MENU_COMMAND_CHECK(str):
      # Sell menu command list
      if str == '/help':
           print('Here is a list of commands for the sell menu:')
-          print('> /help\n> /close\n> /sell <item name>\n > /sell?')
+          print('> /help\n> /close\n> /sell <item name> <1/10/100/quarter/half/all>\n > /sell?')
      # List of what you can sell
      if str == '/sell?':
           print('Here is a list of what you can sell')
@@ -90,9 +90,20 @@ def SELL_MENU_COMMAND_CHECK(str):
           JAGAC_variables.CAN_RUN_MAIN_COMMANDS = True
           print('Closing the sell menu!')
           print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-     ## Sell items
-     # Shiny Gems
-     if str == '/sell shiny gem':
-          JAGAC_variables.WHAT_TO_SELL = 'ShinyGems'
-          print('How much would you like to sell?')
+     ### Sell items
+     ## Shiny Gems
+     # 1
+     if str == '/sell shiny gem 1':
+          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 1
+          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 100
+          print('You sold 1 ✨💎 for 100 🧀')
+          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
+          print('and', JAGAC_variables.CHEESE, '🧀')
+     # 10
+     if str == '/sell shiny gem 10':
+          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 10
+          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 1000
+          print('You sold 10 ✨💎 for 1000 🧀')
+          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
+          print('and', JAGAC_variables.CHEESE, '🧀')
      return
