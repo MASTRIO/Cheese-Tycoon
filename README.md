@@ -12,5 +12,9 @@
 - Done! :0
 
 **2. Play from source**
-- Make sure you have Python installed
-- Make sure you have PySimpleGUI installed 'pip install pysimplegui'
+- Make sure you have Python installed `https://www.python.org/downloads/`
+- Make sure you have PySimpleGUI installed `pip install pysimplegui`
+- Go to the releases section
+- download the source code
+- extract the zip file
+- double-click *JustAnotherGameAboutCheese.pyw*
