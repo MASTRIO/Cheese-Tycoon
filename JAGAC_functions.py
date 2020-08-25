@@ -62,8 +62,9 @@ def COMMAND_CHECK(str):
           return
      if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == False:
           SELL_MENU_COMMAND_CHECK(str)
-     if JAGAC_variables.CHECKING_NUMBERS == True:
-          JAGAC_variables.HOW_MUCH_TO_SELL = str
+     if JAGAC_variables.CHECKING_SELL_NUMBERS == True:
+          SELL_ITEM(str)
+
 
 # Open sell menu function
 def OPEN_SELL_MENU():
@@ -94,8 +95,17 @@ def SELL_MENU_COMMAND_CHECK(str):
      ## Sell items
      # Shiny Gems
      if str == '/sell shiny gem':
-          JAGAC_variables.WHAT_TO_SELL = 'JAGAC_variables.resourceSHINY_GEMS'
-          JAGAC_variables.CHECKING_NUMBERS = True
+          JAGAC_variables.WHAT_TO_SELL = 'ShinyGems'
+          JAGAC_variables.CHECKING_SELL_NUMBERS = True
           print('How much would you like to sell?')
           print('Max =', JAGAC_variables.resourceSHINY_GEMS)
+     return
+
+# Sell item
+def SELL_ITEM(str):
+     if JAGAC_variables.WHAT_TO_SELL == 'ShinyGems':
+          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - str
+          JAGAC_variables.HOW_MUCH_TO_GAIN = str * 100
+          
+          print('You sold', str, '✨💎 and gained')
      return
