@@ -63,7 +63,6 @@ def COMMAND_CHECK(str):
      if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == False:
           SELL_MENU_COMMAND_CHECK(str)
      if JAGAC_variables.CHECKING_SELL_NUMBERS == True:
-          time.sleep(0.1)
           SELL_ITEM(str)
 
 
