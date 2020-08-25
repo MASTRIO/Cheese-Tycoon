@@ -2,7 +2,10 @@
 GUI_THEME = 'NeutralBlue'
 
 # Background Stuff
-CAN_RUN_COMMAND = True
+CAN_RUN_MAIN_COMMANDS = True
+CHECKING_NUMBERS = False
+HOW_MUCH_TO_SELL = 0
+WHAT_TO_SELL = ''
 GAME_VERSION = 'v0.1'
 
 # Currency

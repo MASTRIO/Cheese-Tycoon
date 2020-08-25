@@ -7,7 +7,7 @@ import time
 ## Functions
 # Command check function
 def COMMAND_CHECK(str):
-     if JAGAC_variables.CAN_RUN_COMMAND == True:
+     if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == True:
           # Help command
           if str == '/help':
                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
@@ -60,12 +60,14 @@ def COMMAND_CHECK(str):
                JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS + random.randint(3,150)
                JAGAC_variables.resourceBLUE_CHEESE = JAGAC_variables.resourceBLUE_CHEESE + random.randint(3,150)
           return
-     if JAGAC_variables.CAN_RUN_COMMAND == False:
+     if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == False:
           SELL_MENU_COMMAND_CHECK(str)
+     if JAGAC_variables.CHECKING_NUMBERS == True:
+          JAGAC_variables.HOW_MUCH_TO_SELL = str
 
 # Open sell menu function
 def OPEN_SELL_MENU():
-     JAGAC_variables.CAN_RUN_COMMAND = False
+     JAGAC_variables.CAN_RUN_MAIN_COMMANDS = False
      return
 
 # Sell menu command checker
@@ -86,11 +88,14 @@ def SELL_MENU_COMMAND_CHECK(str):
                print('> [Ƀ🧀] blue cheese')
      # Close the sell menu
      if str == '/close':
-          JAGAC_variables.CAN_RUN_COMMAND = True
+          JAGAC_variables.CAN_RUN_MAIN_COMMANDS = True
           print('Closing the sell menu!')
           print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
      ## Sell items
      # Shiny Gems
      if str == '/sell shiny gem':
-          print('No U')
+          JAGAC_variables.WHAT_TO_SELL = 'JAGAC_variables.resourceSHINY_GEMS'
+          JAGAC_variables.CHECKING_NUMBERS = True
+          print('How much would you like to sell?')
+          print('Max =', JAGAC_variables.resourceSHINY_GEMS)
      return
