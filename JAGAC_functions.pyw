@@ -94,16 +94,25 @@ def SELL_MENU_COMMAND_CHECK(str):
      ## Shiny Gems
      # 1
      if str == '/sell shiny gem 1':
-          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 1
-          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 100
-          print('You sold 1 ✨💎 for 100 🧀')
-          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-          print('and', JAGAC_variables.CHEESE, '🧀')
+          if JAGAC_variables.resourceSHINY_GEMS > 0:
+               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 1
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 20
+               print('You sold 1 ✨💎 for 20 🧀')
+               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
+               print('and', JAGAC_variables.CHEESE, '🧀')
      # 10
      if str == '/sell shiny gem 10':
-          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 10
-          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 1000
-          print('You sold 10 ✨💎 for 1000 🧀')
-          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-          print('and', JAGAC_variables.CHEESE, '🧀')
+          if JAGAC_variables.resourceSHINY_GEMS > 9:
+               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 10
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 200
+               print('You sold 10 ✨💎 for 200 🧀')
+               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
+               print('and', JAGAC_variables.CHEESE, '🧀')
+     if str == '/sell shiny gem 100':
+          if JAGAC_variables.resourceSHINY_GEMS > 99:
+               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 100
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 2000
+               print('You sold 100 ✨💎 for 2000 🧀')
+               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
+               print('and', JAGAC_variables.CHEESE, '🧀')
      return
