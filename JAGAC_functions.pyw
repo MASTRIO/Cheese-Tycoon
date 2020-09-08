@@ -64,10 +64,10 @@ def COMMAND_CHECK(str):
                JAGAC_variables.resourcePEBBLE = JAGAC_variables.resourcePEBBLE + random.randint(3,150)
           return
      if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == False:
-          if JAGAC_variables.IS_CHECKING_NUMBERS == True:
-               SELL_AMOUNT(str)
-          elif JAGAC_variables.CAN_RUN_SELL_COMMANDS == True:
+          if JAGAC_variables.CAN_RUN_SELL_COMMANDS == True:
                SELL_MENU_COMMAND_CHECK(str)
+          elif JAGAC_variables.IS_CHECKING_NUMBERS == True:
+               SELL_AMOUNT(str)
 
 
 # Open sell menu function
@@ -111,7 +111,9 @@ def SELL_MENU_COMMAND_CHECK(str):
      return
 
 def SELL_AMOUNT(int):
-     JAGAC_variables.IS_CHECKING_NUMBERS = False
-     if JAGAC_variables.resourceSHINY_GEMS < 0:
+     if JAGAC_variables.resourceSHINY_GEMS <= int:
           print('You sold', int, '✨💎 for')
+          JAGAC_variables.IS_CHECKING_NUMBERS = False
+     else:
+          print('That number is too high!')
      return
