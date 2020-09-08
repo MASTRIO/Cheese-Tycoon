@@ -64,12 +64,16 @@ def COMMAND_CHECK(str):
                JAGAC_variables.resourcePEBBLE = JAGAC_variables.resourcePEBBLE + random.randint(3,150)
           return
      if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == False:
-          SELL_MENU_COMMAND_CHECK(str)
+          if JAGAC_variables.IS_CHECKING_NUMBERS == True:
+               SELL_AMOUNT(str)
+          elif JAGAC_variables.CAN_RUN_SELL_COMMANDS == True:
+               SELL_MENU_COMMAND_CHECK(str)
 
 
 # Open sell menu function
 def OPEN_SELL_MENU():
      JAGAC_variables.CAN_RUN_MAIN_COMMANDS = False
+     JAGAC_variables.CAN_RUN_SELL_COMMANDS = True
      return
 
 # Sell menu command checker
@@ -93,111 +97,21 @@ def SELL_MENU_COMMAND_CHECK(str):
      # Close the sell menu
      if str == '/close':
           JAGAC_variables.CAN_RUN_MAIN_COMMANDS = True
+          JAGAC_variables.CAN_RUN_SELL_COMMANDS = False
+          JAGAC_variables.IS_CHECKING_NUMBERS = False
           print('Closing the sell menu!')
           print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
      ### Sell items
      ## Shiny Gems
-     # 1
-     if str == '/sell shiny gem 1':
-          if JAGAC_variables.resourceSHINY_GEMS > 0:
-               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 1
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 20
-               print('You sold 1 ✨💎 for 20 🧀')
-               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-               print('and', JAGAC_variables.CHEESE, '🧀')
-          else:
-               print('You do not have enough Shiny Gems to sell')
-     # 10
-     if str == '/sell shiny gem 10':
-          if JAGAC_variables.resourceSHINY_GEMS > 9:
-               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 10
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 200
-               print('You sold 10 ✨💎 for 200 🧀')
-               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-               print('and', JAGAC_variables.CHEESE, '🧀')
-          else:
-               print('You do not have enough Shiny Gems to sell')
-     # 100
-     if str == '/sell shiny gem 100':
-          if JAGAC_variables.resourceSHINY_GEMS > 99:
-               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 100
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 2000
-               print('You sold 100 ✨💎 for 2000 🧀')
-               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-               print('and', JAGAC_variables.CHEESE, '🧀')
-          else:
-               print('You do not have enough Shiny Gems to sell')
-     # Quarter
-     if str == '/sell shiny gem quarter':
-          print('You sold', (round(JAGAC_variables.resourceSHINY_GEMS / 4)), '✨💎 for', (round((JAGAC_variables.resourceSHINY_GEMS / 4) * 20)), '🧀')
-          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (round((JAGAC_variables.resourceSHINY_GEMS / 4)) * 20)
-          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - (round(JAGAC_variables.resourceSHINY_GEMS / 4))
-          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-          print('and', JAGAC_variables.CHEESE, '🧀')
-     # Half
-     if str == '/sell shiny gem half':
-          print('You sold', (round(JAGAC_variables.resourceSHINY_GEMS / 2)), '✨💎 for', (round((JAGAC_variables.resourceSHINY_GEMS / 2) * 20)), '🧀')
-          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (round((JAGAC_variables.resourceSHINY_GEMS / 2)) * 20)
-          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - (round(JAGAC_variables.resourceSHINY_GEMS / 2))
-          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-          print('and', JAGAC_variables.CHEESE, '🧀')
-     # All
-     if str == '/sell shiny gem all':
-          print('You sold', round(JAGAC_variables.resourceSHINY_GEMS), '✨💎 for', round(JAGAC_variables.resourceSHINY_GEMS * 20), '🧀')
-          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + round(JAGAC_variables.resourceSHINY_GEMS * 20)
-          JAGAC_variables.resourceSHINY_GEMS = 0
-          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-          print('and', JAGAC_variables.CHEESE, '🧀')
-     ## Pebbles
-     # 1
-     if str == '/sell pebble 1':
-          if JAGAC_variables.resourceSHINY_GEMS > 0:
-               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 1
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 20
-               print('You sold 1 ✨💎 for 20 🧀')
-               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-               print('and', JAGAC_variables.CHEESE, '🧀')
-          else:
-               print('You do not have enough Shiny Gems to sell')
-     # 10
-     if str == '/sell pebble 10':
-          if JAGAC_variables.resourceSHINY_GEMS > 9:
-               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 10
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 200
-               print('You sold 10 ✨💎 for 200 🧀')
-               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-               print('and', JAGAC_variables.CHEESE, '🧀')
-          else:
-               print('You do not have enough Shiny Gems to sell')
-     # 100
-     if str == '/sell pebble 100':
-          if JAGAC_variables.resourceSHINY_GEMS > 99:
-               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - 100
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + 2000
-               print('You sold 100 ✨💎 for 2000 🧀')
-               print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-               print('and', JAGAC_variables.CHEESE, '🧀')
-          else:
-               print('You do not have enough Shiny Gems to sell')
-     # Quarter
-     if str == '/sell pebble quarter':
-          print('You sold', (round(JAGAC_variables.resourceSHINY_GEMS / 4)), '✨💎 for', (round((JAGAC_variables.resourceSHINY_GEMS / 4) * 20)), '🧀')
-          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (round((JAGAC_variables.resourceSHINY_GEMS / 4)) * 20)
-          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - (round(JAGAC_variables.resourceSHINY_GEMS / 4))
-          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-          print('and', JAGAC_variables.CHEESE, '🧀')
-     # Half
-     if str == '/sell pebble half':
-          print('You sold', (round(JAGAC_variables.resourceSHINY_GEMS / 2)), '✨💎 for', (round((JAGAC_variables.resourceSHINY_GEMS / 2) * 20)), '🧀')
-          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (round((JAGAC_variables.resourceSHINY_GEMS / 2)) * 20)
-          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - (round(JAGAC_variables.resourceSHINY_GEMS / 2))
-          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-          print('and', JAGAC_variables.CHEESE, '🧀')
-     # All
-     if str == '/sell pebble all':
-          print('You sold', round(JAGAC_variables.resourceSHINY_GEMS), '✨💎 for', round(JAGAC_variables.resourceSHINY_GEMS * 20), '🧀')
-          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + round(JAGAC_variables.resourceSHINY_GEMS * 20)
-          JAGAC_variables.resourceSHINY_GEMS = 0
-          print('You now have', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
-          print('and', JAGAC_variables.CHEESE, '🧀')
+     if str == '/sell shiny gem':
+          JAGAC_variables.IS_CHECKING_NUMBERS = True
+          JAGAC_variables.CAN_RUN_SELL_COMMANDS = False
+          print('How many ✨💎 would you like to sell?')
+          print('Max you can sell:', JAGAC_variables.resourceSHINY_GEMS)
+     return
+
+def SELL_AMOUNT(int):
+     JAGAC_variables.IS_CHECKING_NUMBERS = False
+     if JAGAC_variables.resourceSHINY_GEMS < 0:
+          print('You sold', int, '✨💎 for')
      return
