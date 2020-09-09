@@ -36,4 +36,6 @@
 - Done! :0
 
 # Contributing!
-[I'll get back to ya on that one! :)](https://github.com/MASTRIO/JAGAC/blob/master/CONTRIBUTING.md)
+Feel free to contribute to this game by making a Pull Request!
+I'd appreciate the help! (Seriously, I'm lonely)
+[How can I contribute?](https://github.com/MASTRIO/JAGAC/blob/master/CONTRIBUTING.md)
