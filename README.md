@@ -32,3 +32,6 @@
 - When the process is complete go to the new folder in the builds folder
 - Run the game by double-clicking *JustAnotherGameAboutCheese.exe*
 - Done! :0
+
+# Contributing!
+**I'll get back to ya on that one! :)**
