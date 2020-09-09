@@ -13,7 +13,7 @@
 - Run the game by double-clicking *JustAnotherGameAboutCheese.exe*
 - Done! :0
 
-**2. Play from source**
+**2. Play using source**
 - Make sure you have Python installed `https://www.python.org/downloads/`
 - Make sure you have PySimpleGUI installed `pip install pysimplegui`
 - Go to the releases section
