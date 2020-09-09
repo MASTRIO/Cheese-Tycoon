@@ -36,4 +36,4 @@
 - Done! :0
 
 # Contributing!
-**I'll get back to ya on that one! :)**
+[I'll get back to ya on that one! :)](https://github.com/MASTRIO/JAGAC/blob/master/CONTRIBUTING.md)
