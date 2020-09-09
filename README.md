@@ -1,5 +1,6 @@
 # JAGAC
  IDK I tried making a game in python :/
+ *Sooo, it turns out I'm turning this into a full game now... **Uh Oh** *
 
 # Installation
 *There are three different ways to install this game*
