@@ -107,6 +107,7 @@ def SELL_MENU_COMMAND_CHECK(str):
      # Shiny Gem
      if JAGAC_variables.SELL_SHINY_GEM == True:
           SETUP_SELL_DATA()
+          SELL_ITEM(SHINY_GEMS,'✨💎', 40)
           print('You sold', JAGAC_variables.AMOUNT_TO_SELL, '✨💎 for', (JAGAC_variables.AMOUNT_TO_SELL * 40))
           print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
           RESET_SELL_DATA()
@@ -123,6 +124,6 @@ def RESET_SELL_DATA():
      return
 
 def SELL_ITEM(str1, str2, int1):
-     JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - JAGAC_variables.AMOUNT_TO_SELL
-     JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 40)
+     JAGAC_variables.resource(str1) = JAGAC_variables.resource(str1) - JAGAC_variables.AMOUNT_TO_SELL
+     JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * int1)
      return
