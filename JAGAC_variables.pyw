@@ -4,11 +4,9 @@ GUI_THEME = 'NeutralBlue'
 # Background Stuff
 CAN_RUN_MAIN_COMMANDS = True
 CAN_RUN_SELL_COMMANDS = False
-IS_CHECKING_NUMBERS = False
 CURRENT_SELL_COMMAND = "none"
 AMOUNT_TO_SELL = 0
-RESOURCE_TO_SELL = 'none'
-GAME_VERSION = 'v0.2'
+GAME_VERSION = 'Pre-Alpha v0.2'
 
 # Selling ...
 SELL_SHINY_GEM = False

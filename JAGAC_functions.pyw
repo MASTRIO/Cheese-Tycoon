@@ -79,7 +79,7 @@ def SELL_MENU_COMMAND_CHECK(str):
      # Sell menu command list
      if str == '/help':
           print('Here is a list of commands for the sell menu:')
-          print('> /help\n> /close\n> /sell <item name> <1/10/100/quarter/half/all>\n > /sell?')
+          print('> /help\n> /close\n> /sell <item name> <amount>\n > /sell?')
      # List of what you can sell
      if str == '/sell?':
           print('Here is a list of what you can sell')
@@ -99,19 +99,27 @@ def SELL_MENU_COMMAND_CHECK(str):
           JAGAC_variables.IS_CHECKING_NUMBERS = False
           print('Closing the sell menu!')
           print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-     ## Sell item checker
+     ### Sell item checker
      # Var
-     
-     # If is
-     if str == 
-     
-     
-     
-     ## Shiny Gems
-     if str == '/sell shiny gem':
-          JAGAC_variables.IS_CHECKING_NUMBERS = True
-          JAGAC_variables.CAN_RUN_SELL_COMMANDS = False
-          JAGAC_variables.RESOURCE_TO_SELL = 'JAGAC_variables.resourceSHINY_GEMS'
-          print('How many ✨💎 would you like to sell?')
-          print('Max you can sell:', JAGAC_variables.resourceSHINY_GEMS)
+     JAGAC_variables.CURRENT_SELL_COMMAND = str
+     JAGAC_variables.SELL_SHINY_GEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell shiny gem")
+     ## If is
+     # Shiny Gem
+     if JAGAC_variables.SELL_SHINY_GEM == True:
+          SETUP_SELL_DATA()
+          JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - JAGAC_variables.AMOUNT_TO_SELL
+          JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 40)
+          print('You sold', JAGAC_variables.AMOUNT_TO_SELL, '✨💎 for', (JAGAC_variables.AMOUNT_TO_SELL * 40))
+          print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
+          RESET_SELL_DATA()
+     return
+
+def SETUP_SELL_DATA():
+     JAGAC_variables.AMOUNT_TO_SELL = JAGAC_variables.CURRENT_SELL_COMMAND.strip("/ abcdefghijklmnopqrstuvwxyz")
+     JAGAC_variables.AMOUNT_TO_SELL = int(JAGAC_variables.AMOUNT_TO_SELL, base=0)
+     return
+
+def RESET_SELL_DATA():
+     JAGAC_variables.AMOUNT_TO_SELL = 0
+     JAGAC_variables.CURRENT_SELL_COMMAND = 'nothing, yay!'
      return
