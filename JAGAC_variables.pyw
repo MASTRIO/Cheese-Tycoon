@@ -11,7 +11,7 @@ AMOUNT_TO_SELL = 0
 CURRENT_BUY_COMMAND = 'none'
 BUY_ITEM = False
 AMOUNT_TO_BUY = 0
-PREVIOUS_COMMAND = 'none'
+PREVIOUS_COMMAND = '/help'
 GAME_VERSION = 'Pre-Alpha v0.2'
 
 # Currency
