@@ -5,7 +5,6 @@ import keyboard
 # Other Script Resources
 import JAGAC_variables
 import JAGAC_functions
-
 # Set Theme
 sg.theme(JAGAC_variables.GUI_THEME)
 
