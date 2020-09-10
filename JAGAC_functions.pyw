@@ -66,6 +66,7 @@ def COMMAND_CHECK(str):
      if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == False:
           if JAGAC_variables.CAN_RUN_SELL_COMMANDS == True:
                SELL_MENU_COMMAND_CHECK(str)
+          if JAGAC_variables.CAN_RUN_BUY_COMMANDS == True:
 
 
 # Open sell menu function
@@ -161,4 +162,8 @@ def SETUP_SELL_DATA():
 def RESET_SELL_DATA():
      JAGAC_variables.AMOUNT_TO_SELL = 0
      JAGAC_variables.CURRENT_SELL_COMMAND = 'nothing, yay!'
+     return
+
+# Buy menu command check
+def BUY_MENU_COMMAND_CHECK():
      return
