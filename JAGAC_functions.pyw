@@ -62,11 +62,13 @@ def COMMAND_CHECK(str):
                JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS + random.randint(3,150)
                JAGAC_variables.resourceBLUE_CHEESE = JAGAC_variables.resourceBLUE_CHEESE + random.randint(3,150)
                JAGAC_variables.resourcePEBBLE = JAGAC_variables.resourcePEBBLE + random.randint(3,150)
-          return
+
      if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == False:
           if JAGAC_variables.CAN_RUN_SELL_COMMANDS == True:
                SELL_MENU_COMMAND_CHECK(str)
           if JAGAC_variables.CAN_RUN_BUY_COMMANDS == True:
+               BUY_MENU_COMMAND_CHECK(str)
+     return
 
 
 # Open sell menu function
@@ -165,5 +167,5 @@ def RESET_SELL_DATA():
      return
 
 # Buy menu command check
-def BUY_MENU_COMMAND_CHECK():
+def BUY_MENU_COMMAND_CHECK(str):
      return
