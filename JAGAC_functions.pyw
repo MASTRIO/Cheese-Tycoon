@@ -102,20 +102,54 @@ def SELL_MENU_COMMAND_CHECK(str):
      ### Sell item checker
      # Var
      JAGAC_variables.CURRENT_SELL_COMMAND = str
-     JAGAC_variables.SELL_SHINY_GEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell shiny gem")
      ## If is
      # Shiny Gem
-     if JAGAC_variables.SELL_SHINY_GEM == True:
+     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell shiny gem")
+     if JAGAC_variables.SELL_ITEM == True:
           SETUP_SELL_DATA()
-          SELL_ITEM('JAGAC_variables.resourceSHINY_GEMS', 40)
-          print('You sold', JAGAC_variables.AMOUNT_TO_SELL, '✨💎', 'for', (JAGAC_variables.AMOUNT_TO_SELL * 40))
-          print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
+          if JAGAC_variables.AMOUNT_TO_SELL > JAGAC_variables.resourceSHINY_GEMS:
+               print("That number is too high! Plz try again!")
+          else:
+               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - JAGAC_variables.AMOUNT_TO_SELL
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 40)
+               print('You sold', JAGAC_variables.AMOUNT_TO_SELL, '✨💎', 'for', (JAGAC_variables.AMOUNT_TO_SELL * 40))
+               print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
           RESET_SELL_DATA()
-     if JAGAC_variables.SELL_SHINY_GEM == True:
+     # Cheese Jumper
+     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell cheese jumper")
+     if JAGAC_variables.SELL_ITEM == True:
           SETUP_SELL_DATA()
-          SELL_ITEM('JAGAC_variables.resourceSHINY_GEMS', 40)
-          print('You sold', JAGAC_variables.AMOUNT_TO_SELL, '✨💎', 'for', (JAGAC_variables.AMOUNT_TO_SELL * 40))
-          print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
+          if JAGAC_variables.AMOUNT_TO_SELL > JAGAC_variables.resourceCHEESE_JUMPER:
+               print("That number is too high! Plz try again!")
+          else:
+               JAGAC_variables.resourceCHEESE_JUMPER = JAGAC_variables.resourceCHEESE_JUMPER - JAGAC_variables.AMOUNT_TO_SELL
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 90)
+               print('You sold', JAGAC_variables.AMOUNT_TO_SELL, '🧀🥋', 'for', (JAGAC_variables.AMOUNT_TO_SELL * 90))
+               print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceCHEESE_JUMPER, '🧀🥋')
+          RESET_SELL_DATA()
+     # Blue Cheese
+     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell blue cheese")
+     if JAGAC_variables.SELL_ITEM == True:
+          SETUP_SELL_DATA()
+          if JAGAC_variables.AMOUNT_TO_SELL > JAGAC_variables.resourceBLUE_CHEESE:
+               print("That number is too high! Plz try again!")
+          else:
+               JAGAC_variables.resourceBLUE_CHEESE = JAGAC_variables.resourceBLUE_CHEESE - JAGAC_variables.AMOUNT_TO_SELL
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 90)
+               print('You sold', JAGAC_variables.AMOUNT_TO_SELL, 'Ƀ🧀', 'for', (JAGAC_variables.AMOUNT_TO_SELL * 90))
+               print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceBLUE_CHEESE, 'Ƀ🧀')
+          RESET_SELL_DATA()
+     # Pebble
+     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell pebble")
+     if JAGAC_variables.SELL_ITEM == True:
+          SETUP_SELL_DATA()
+          if JAGAC_variables.AMOUNT_TO_SELL > JAGAC_variables.resourcePEBBLE:
+               print("That number is too high! Plz try again!")
+          else:
+               JAGAC_variables.resourcePEBBLE = JAGAC_variables.resourcePEBBLE - JAGAC_variables.AMOUNT_TO_SELL
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 90)
+               print('You sold', JAGAC_variables.AMOUNT_TO_SELL, '⭖', 'for', (JAGAC_variables.AMOUNT_TO_SELL * 90))
+               print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourcePEBBLE, '⭖')
           RESET_SELL_DATA()
      return
 
@@ -127,9 +161,4 @@ def SETUP_SELL_DATA():
 def RESET_SELL_DATA():
      JAGAC_variables.AMOUNT_TO_SELL = 0
      JAGAC_variables.CURRENT_SELL_COMMAND = 'nothing, yay!'
-     return
-
-def SELL_ITEM(str, int):
-     str = str - JAGAC_variables.AMOUNT_TO_SELL
-     JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * int)
      return
