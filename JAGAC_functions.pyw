@@ -138,7 +138,7 @@ def SELL_MENU_COMMAND_CHECK(str):
                print("That number is too high! Plz try again!")
           else:
                JAGAC_variables.resourceBLUE_CHEESE = JAGAC_variables.resourceBLUE_CHEESE - JAGAC_variables.AMOUNT_TO_SELL
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 90)
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 250)
                print('You sold', JAGAC_variables.AMOUNT_TO_SELL, 'Ƀ🧀', 'for', (JAGAC_variables.AMOUNT_TO_SELL * 90))
                print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceBLUE_CHEESE, 'Ƀ🧀')
           RESET_SELL_DATA()
@@ -150,7 +150,7 @@ def SELL_MENU_COMMAND_CHECK(str):
                print("That number is too high! Plz try again!")
           else:
                JAGAC_variables.resourcePEBBLE = JAGAC_variables.resourcePEBBLE - JAGAC_variables.AMOUNT_TO_SELL
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 90)
+               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 1)
                print('You sold', JAGAC_variables.AMOUNT_TO_SELL, '⭖', 'for', (JAGAC_variables.AMOUNT_TO_SELL * 90))
                print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourcePEBBLE, '⭖')
           RESET_SELL_DATA()
