@@ -1,0 +1,5 @@
+.outputBox {
+    border: 5px outset black;
+    background-color: white;
+    height: 300px;
+}
