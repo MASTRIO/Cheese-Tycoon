@@ -2,12 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Just Another Game About Cheese</title>
+    <title>Just Another Game About Cheese - v0.1</title>
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
-    <div class="outputBox">
-      <p>Hi</p>
-    </div>
+    <form action="/index.html">
+      <input type="text" id="commandBox" value="" placeholder="Type /help for a list of commands" style="width: 80%;">
+      <input type="submit" onclick="formChanged()" value="Run">
+    </form>
   </body>
 </html>
