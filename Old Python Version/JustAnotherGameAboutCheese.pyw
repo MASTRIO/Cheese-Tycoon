@@ -1,7 +1,6 @@
 ## Import Stuff
 import PySimpleGUI as sg
 import time
-import keyboard
 # Other Script Resources
 import JAGAC_variables
 import JAGAC_functions

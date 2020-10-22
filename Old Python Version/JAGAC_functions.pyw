@@ -1,8 +1,6 @@
 # Import Stuff
 import JAGAC_variables
 import random
-import PySimpleGUI as sg
-import time
 
 ## Functions
 # Command check function
