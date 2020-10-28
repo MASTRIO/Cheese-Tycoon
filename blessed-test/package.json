@@ -1,0 +1,22 @@
+{
+  "name": "jagac",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MASTRIO/JAGAC.git"
+  },
+  "author": "MASTRIO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MASTRIO/JAGAC/issues"
+  },
+  "homepage": "https://github.com/MASTRIO/JAGAC#readme",
+  "dependencies": {
+    "blessed": "^0.1.81"
+  }
+}
