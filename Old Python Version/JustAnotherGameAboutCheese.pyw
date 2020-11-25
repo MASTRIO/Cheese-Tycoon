@@ -28,7 +28,7 @@ while True:
         time.sleep(0.5)
         window1.close()
         break
-    if event == 'Clear Output':
+    if event == 'Clear Output': 
         window1['-OUTPUT-'].update('')
     if event == '⭡':
         JAGAC_functions.COMMAND_CHECK(JAGAC_variables.PREVIOUS_COMMAND)

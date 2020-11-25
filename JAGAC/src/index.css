@@ -1,5 +1,6 @@
-.outputBox {
-    border: 5px outset black;
-    background-color: white;
-    height: 300px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem;
 }
