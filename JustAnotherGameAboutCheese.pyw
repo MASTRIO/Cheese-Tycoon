@@ -2,19 +2,21 @@
 import PySimpleGUI as sg
 import time
 # Other Script Resources
-import JAGAC_variables as Jvar
-import JAGAC_functions as Jfunc
+import variables as Jvar
+import functions as Jfunc
 
 # Set Theme
 sg.theme(Jvar.GUI_THEME)
 
 # Main Gui Layout
-layout1 = [ [sg.Output(size=(50,25), key='-OUTPUT-')],
-            [sg.Button('Clear Output')],
-            [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
-            [sg.Text('What do you want to do?')],
-            [sg.InputText(do_not_clear=False, tooltip='Type /help for a list of commands'), sg.Button('⭡', tooltip='Run previous command')],
-            [sg.Button('Run Command'), sg.Button("Save & Quit")]  ]
+layout1 = [ 
+    [sg.Output(size=(50,25), key='-OUTPUT-')],
+    [sg.Button('Clear Output')],
+    [sg.Text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')],
+    [sg.Text('What do you want to do?')],
+    [sg.InputText(do_not_clear=False, tooltip='Type /help for a list of commands'), sg.Button('⭡', tooltip='Run previous command')],
+    [sg.Button('Run Command'), sg.Button("Save & Quit")]
+]
 
 # Opens Gui
 window1 = sg.Window('Just Another Game About Cheese', layout1)

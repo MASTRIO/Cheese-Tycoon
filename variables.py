@@ -1,3 +1,17 @@
+# Settings
+GUI_THEME = 'NeutralBlue'
+
+# Currency
+CHEESE = 50
+
+# Resources/Materials
+RESOURCES = [
+    "shiny_gems"[69],
+    "cheese_jumpers"[0],
+    "blue_cheese"[0],
+    "pebble"[0]
+]
+
 # Command Running
 CAN_RUN_MAIN_COMMANDS = True
 CAN_RUN_SELL_COMMANDS = False
@@ -12,7 +26,7 @@ BUY_ITEM = False
 AMOUNT_TO_BUY = 0
 
 # Item API
-RETURNED_ITEM_DATA = 0
+LOADED_RESOURCE_AMOUNT = 0
 
 # ? Do I really need this?
 ITEM_DATA_ACCESS = [
@@ -20,7 +34,8 @@ ITEM_DATA_ACCESS = [
     "buyPrice"[False],
     "displayName"[False],
     "icon"[False],
-    "amount"[False]
+    "amount"[False],
+    "inventory"[False]
 ]
 
 # Game
