@@ -54,23 +54,24 @@ def COMMAND_CHECK(str):
           ## Testing Commands
           # Add random of every resource command
           if str == '/testing add resources':
-               print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-               print('A random amount of every resource has been given to you!')
-               print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-               JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + random.randint(50,1500)
-               JAGAC_variables.resourceCHEESE_JUMPER = JAGAC_variables.resourceCHEESE_JUMPER + random.randint(3,150)
-               JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS + random.randint(3,150)
-               JAGAC_variables.resourceBLUE_CHEESE = JAGAC_variables.resourceBLUE_CHEESE + random.randint(3,150)
-               JAGAC_variables.resourcePEBBLE = JAGAC_variables.resourcePEBBLE + random.randint(3,150)
+               if JAGAC_variables.DEBUG_MODE == True:
+                    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                    print('A random amount of every resource has been given to you!')
+                    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                    JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + random.randint(50,1500)
+                    JAGAC_variables.resourceCHEESE_JUMPER = JAGAC_variables.resourceCHEESE_JUMPER + random.randint(3,150)
+                    JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS + random.randint(3,150)
+                    JAGAC_variables.resourceBLUE_CHEESE = JAGAC_variables.resourceBLUE_CHEESE + random.randint(3,150)
+                    JAGAC_variables.resourcePEBBLE = JAGAC_variables.resourcePEBBLE + random.randint(3,150)
           # Toggle Debug mode
           if str == '/debug':
                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                if JAGAC_variables.DEBUG_MODE == False:
                     JAGAC_variables.DEBUG_MODE = True
-                    print('Debug Mode Active')
+                    print('Debug Mode Enabled')
                elif JAGAC_variables.DEBUG_MODE == True:
                     JAGAC_variables.DEBUG_MODE = False
-                    print('Debug Mode Diabl')
+                    print('Debug Mode Disabled')
                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
      if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == False:
