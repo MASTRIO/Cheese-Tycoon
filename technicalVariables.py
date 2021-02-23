@@ -20,7 +20,6 @@ ITEM_DATA_ACCESS = [
     "buyPrice"[False],
     "displayName"[False],
     "icon"[False],
-    "id"[False],
     "amount"[False]
 ]
 
