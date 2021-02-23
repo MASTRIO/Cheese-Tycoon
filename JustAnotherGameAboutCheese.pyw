@@ -2,11 +2,11 @@
 import PySimpleGUI as sg
 import time
 # Other Script Resources
-import JAGAC_variables
-import JAGAC_functions
+import JAGAC_variables as Jvar
+import JAGAC_functions as Jfunc
 
 # Set Theme
-sg.theme(JAGAC_variables.GUI_THEME)
+sg.theme(Jvar.GUI_THEME)
 
 # Main Gui Layout
 layout1 = [ [sg.Output(size=(50,25), key='-OUTPUT-')],
@@ -31,12 +31,12 @@ while True:
     if event == 'Clear Output': 
         window1['-OUTPUT-'].update('')
     if event == '⭡':
-        JAGAC_functions.COMMAND_CHECK(JAGAC_variables.PREVIOUS_COMMAND)
+        Jfunc.COMMAND_LIST(Jvar.PREVIOUS_COMMAND)
     ## Runs when RUN COMMAND is pressed
     # Checks what command you just ran and executes an action if the correct command is entered
     if event in ('Run Command'):
-        JAGAC_functions.COMMAND_CHECK(values[0])
-        JAGAC_variables.PREVIOUS_COMMAND = values[0]
+        Jfunc.COMMAND_LIST(values[0])
+        Jvar.PREVIOUS_COMMAND = values[0]
 
 # Closes Gui and game
 window1.close()

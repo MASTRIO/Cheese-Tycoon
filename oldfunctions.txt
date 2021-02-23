@@ -1,8 +1,11 @@
-# Import Stuff
+# * Import Stuff
 import JAGAC_variables
 import random
 
-## Functions
+# * Functions
+
+# TODO: Change all of this to use the package
+
 # Command check function
 def COMMAND_CHECK(str):
      if JAGAC_variables.CAN_RUN_MAIN_COMMANDS == True:
