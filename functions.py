@@ -20,5 +20,5 @@ def COMMAND_LIST(command):
 def ITEM_LIST():
     # TODO: Make Item List
     Jvar.LOADED_RESOURCE_AMOUNT = Jvar.RESOURCES.shiny_gems
-    Jitems.newItem("Shiny Gem","✨💎","40","30")
+    Jitems.newItem("Shiny Gem","✨💎",40,30)
     return
