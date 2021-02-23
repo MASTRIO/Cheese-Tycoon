@@ -13,6 +13,7 @@ BUY_ITEM = False
 AMOUNT_TO_BUY = 0
 PREVIOUS_COMMAND = '/help'
 GAME_VERSION = 'Pre-Alpha v0.2'
+DEBUG_MODE = False
 
 # Currency
 CHEESE = 50
