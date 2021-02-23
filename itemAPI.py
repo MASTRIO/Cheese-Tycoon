@@ -9,26 +9,22 @@ import variables as Jvar
 
 # * API
 # Item Manager
-def newItem(displayName,icon,sellPrice,buyPrice,):
+def newItem(access,displayName,icon,sellPrice,buyPrice,):
     # Display Name
-    if Jvar.ITEM_DATA_ACCESS.displayName == True:
-        Jvar.ITEM_DATA_ACCESS.displayName[False]
+    if access == 'displayName':
         print(displayName)
         return displayName
     # Icon
-    if Jvar.ITEM_DATA_ACCESS.icon == True:
-        Jvar.ITEM_DATA_ACCESS.icon[False]
+    if access == 'icon':
         print(icon)
     # Sell Price
-    if Jvar.ITEM_DATA_ACCESS.sellPrice == True:
-        Jvar.ITEM_DATA_ACCESS.sellPrice[False]
+    if access == 'sellPrice':
         return sellPrice
     # Buy Price
-    if Jvar.ITEM_DATA_ACCESS.buyPrice == True:
-        Jvar.ITEM_DATA_ACCESS.buyPrice[False]
+    if access == 'buyPrice':
         return buyPrice
     # Inventory
-    if Jvar.ITEM_DATA_ACCESS.inventory == True:
-        Jvar.ITEM_DATA_ACCESS.inventory[False]
-        print("[" + icon + "] " + displayName + " =" + Jvar.LOADED_RESOURCE_AMOUNT)
+    if access == 'inventory':
+        if Jvar.LOADED_RESOURCE_AMOUNT > 0:
+            print('[{}] {} = {}'.format(icon,displayName,Jvar.LOADED_RESOURCE_AMOUNT))
     return

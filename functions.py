@@ -3,6 +3,7 @@ import variables as Jvar
 import shopMenu as Jshop
 import itemAPI as Jitems
 import commandSystem as Jcommands
+import resources as Jres
 
 # * Functions
 # Commands
@@ -17,8 +18,11 @@ def COMMAND_LIST(command):
     return
 
 # Items
-def ITEM_LIST():
+def ITEM_LIST(access):
     # TODO: Make Item List
-    Jvar.LOADED_RESOURCE_AMOUNT = Jvar.RESOURCES.shiny_gems
-    Jitems.newItem("Shiny Gem","✨💎",40,30)
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.shiny_gems
+    Jitems.newItem(access,'Shiny Gem','✨💎',40,30)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.cheese_jumpers
+    Jitems.newItem(access,'Cheese Jumper','🧀🥋',90,100)
     return

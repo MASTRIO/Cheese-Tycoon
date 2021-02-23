@@ -11,7 +11,7 @@ import functions as Jfunc
 # * Commands
 # Help
 def chelp(command):
-    if command == "/help":
+    if command == '/help':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Here is a list of commands:')
         print('> /help\n> /version\n> /balance\n> /inventory\n> /sell\n> /settings')
@@ -25,7 +25,7 @@ def chelp(command):
 
 # Version
 def cversion(command):
-    if command == "/version":
+    if command == '/version':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('JAGAC:')
         print('Version', Jvar.GAME_VERSION)
@@ -34,7 +34,7 @@ def cversion(command):
 
 # Balance
 def cbalance(command):
-    if command == "/balance":
+    if command == '/balance':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('You have', Jvar.CHEESE, '🧀 in your wallet')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
@@ -42,22 +42,22 @@ def cbalance(command):
 
 # Inventory
 def cinventory(command):
-    if command == "/inventory":
+    if command == '/inventory':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Here is everything in your inventory:')
-        Jfunc.ITEM_LIST()
+        Jfunc.ITEM_LIST('inventory')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     return
 
 # Shop
 def cshop(command):
-    if command == "/shop":
-        print("test")
+    if command == '/shop':
+        print('test')
     return
 
 # Settings
 def csettings(command):
-    if command == "/settings":
+    if command == '/settings':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Opening Settings Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')

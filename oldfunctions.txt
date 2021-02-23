@@ -91,11 +91,11 @@ def SELL_MENU_COMMAND_CHECK(str):
      JAGAC_variables.CURRENT_SELL_COMMAND = str
      ## If is
      # Shiny Gem
-     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell shiny gem")
+     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith('/sell shiny gem')
      if JAGAC_variables.SELL_ITEM == True:
           SETUP_SELL_DATA()
           if JAGAC_variables.AMOUNT_TO_SELL > JAGAC_variables.resourceSHINY_GEMS:
-               print("That number is too high! Plz try again!")
+               print('That number is too high! Plz try again!')
           else:
                JAGAC_variables.resourceSHINY_GEMS = JAGAC_variables.resourceSHINY_GEMS - JAGAC_variables.AMOUNT_TO_SELL
                JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 40)
@@ -103,11 +103,11 @@ def SELL_MENU_COMMAND_CHECK(str):
                print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceSHINY_GEMS, '✨💎')
           RESET_SELL_DATA()
      # Cheese Jumper
-     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell cheese jumper")
+     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith('/sell cheese jumper')
      if JAGAC_variables.SELL_ITEM == True:
           SETUP_SELL_DATA()
           if JAGAC_variables.AMOUNT_TO_SELL > JAGAC_variables.resourceCHEESE_JUMPER:
-               print("That number is too high! Plz try again!")
+               print('That number is too high! Plz try again!')
           else:
                JAGAC_variables.resourceCHEESE_JUMPER = JAGAC_variables.resourceCHEESE_JUMPER - JAGAC_variables.AMOUNT_TO_SELL
                JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 90)
@@ -115,11 +115,11 @@ def SELL_MENU_COMMAND_CHECK(str):
                print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceCHEESE_JUMPER, '🧀🥋')
           RESET_SELL_DATA()
      # Blue Cheese
-     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell blue cheese")
+     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith('/sell blue cheese')
      if JAGAC_variables.SELL_ITEM == True:
           SETUP_SELL_DATA()
           if JAGAC_variables.AMOUNT_TO_SELL > JAGAC_variables.resourceBLUE_CHEESE:
-               print("That number is too high! Plz try again!")
+               print('That number is too high! Plz try again!')
           else:
                JAGAC_variables.resourceBLUE_CHEESE = JAGAC_variables.resourceBLUE_CHEESE - JAGAC_variables.AMOUNT_TO_SELL
                JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 250)
@@ -127,11 +127,11 @@ def SELL_MENU_COMMAND_CHECK(str):
                print('You now have', JAGAC_variables.CHEESE, '🧀, and', JAGAC_variables.resourceBLUE_CHEESE, 'Ƀ🧀')
           RESET_SELL_DATA()
      # Pebble
-     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith("/sell pebble")
+     JAGAC_variables.SELL_ITEM = JAGAC_variables.CURRENT_SELL_COMMAND.startswith('/sell pebble')
      if JAGAC_variables.SELL_ITEM == True:
           SETUP_SELL_DATA()
           if JAGAC_variables.AMOUNT_TO_SELL > JAGAC_variables.resourcePEBBLE:
-               print("That number is too high! Plz try again!")
+               print('That number is too high! Plz try again!')
           else:
                JAGAC_variables.resourcePEBBLE = JAGAC_variables.resourcePEBBLE - JAGAC_variables.AMOUNT_TO_SELL
                JAGAC_variables.CHEESE = JAGAC_variables.CHEESE + (JAGAC_variables.AMOUNT_TO_SELL * 1)
@@ -141,7 +141,7 @@ def SELL_MENU_COMMAND_CHECK(str):
      return
 
 def SETUP_SELL_DATA():
-     JAGAC_variables.AMOUNT_TO_SELL = JAGAC_variables.CURRENT_SELL_COMMAND.strip("/ abcdefghijklmnopqrstuvwxyz")
+     JAGAC_variables.AMOUNT_TO_SELL = JAGAC_variables.CURRENT_SELL_COMMAND.strip('/ abcdefghijklmnopqrstuvwxyz')
      JAGAC_variables.AMOUNT_TO_SELL = int(JAGAC_variables.AMOUNT_TO_SELL, base=0)
      return
 
