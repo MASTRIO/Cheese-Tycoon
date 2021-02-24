@@ -8,7 +8,6 @@ import resources as Jres
 # * Functions
 # Commands
 def COMMAND_LIST(command):
-    # TODO: Make Command List
     Jcommands.chelp(command)
     Jcommands.cversion(command)
     Jcommands.cbalance(command)
@@ -19,7 +18,6 @@ def COMMAND_LIST(command):
 
 # Items
 def ITEM_LIST(access):
-    # TODO: Make Item List
     Jvar.LOADED_RESOURCE_AMOUNT = Jres.shiny_gems
     Jitems.newItem(access,'Shiny Gems','✨💎',40,30)
 

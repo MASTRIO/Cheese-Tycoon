@@ -27,4 +27,7 @@ def newItem(access,displayName,icon,sellPrice,buyPrice,):
     if access == 'inventory':
         if Jvar.LOADED_RESOURCE_AMOUNT > 0:
             print('[{}] {} = {}'.format(icon,displayName,Jvar.LOADED_RESOURCE_AMOUNT))
+    # Increase Resources [DEBUG]
+    if access == 'DEBUG.increaseResources':
+        Jvar.LOADED_RESOURCE_AMOUNT = Jvar.LOADED_RESOURCE_AMOUNT + Jvar.DEBUG_INCREASE
     return

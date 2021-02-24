@@ -37,6 +37,6 @@
 
 # Contributing!
 Feel free to contribute to this game!
-I'd appreciate the help! (Seriously, I'm lonely)
+I'd appreciate the help!
 
 [But how can I contribute?](https://github.com/MASTRIO/JAGAC/blob/master/CONTRIBUTING.md)
