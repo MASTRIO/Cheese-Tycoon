@@ -19,6 +19,6 @@ PREVIOUS_COMMAND = '/help'
 
 # Debug
 GAME_VERSION = 'Pre-Alpha v0.3'
-DEBUG_MODE = True
+DEBUG_MODE = False
 DEBUG_CONTAINS = False
 DEBUG_INCREASE = 0
