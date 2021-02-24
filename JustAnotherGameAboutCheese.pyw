@@ -1,4 +1,4 @@
-## Import Stuff
+# * Import Stuff
 import PySimpleGUI as sg
 import time
 # Other Script Resources
