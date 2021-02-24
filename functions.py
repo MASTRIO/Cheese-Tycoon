@@ -42,4 +42,34 @@ def ITEM_LIST(access):
 
     Jvar.LOADED_RESOURCE_AMOUNT = Jres.sticks
     Jitems.newItem(access,'Sticks','/',5,10)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.log
+    Jitems.newItem(access,'Logs','⍃',15,20)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.ruby
+    Jitems.newItem(access,'Rubys','я💎',5,10)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.leaf
+    Jitems.newItem(access,'Leaves','🍁',2,5)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.carrot
+    Jitems.newItem(access,'Carrots','🥕',15,20)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.potato
+    Jitems.newItem(access,'Potatoes','🥔',15,20)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.bread
+    Jitems.newItem(access,'Bread','🍞',20,30)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.brick
+    Jitems.newItem(access,'Bricks','🧱',10,15)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.mouldyPotato
+    Jitems.newItem(access,'Mouldy Potatoes','🕱🥔',10,15)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.child
+    Jitems.newItem(access,'Children','🚼',50,60)
+
+    Jvar.LOADED_RESOURCE_AMOUNT = Jres.toyBear
+    Jitems.newItem(access,'Toy Bears','🧸',20,30)
     return

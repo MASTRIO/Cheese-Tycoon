@@ -2,8 +2,18 @@
 CHEESE = 50
 
 # Resources/Materials
-shiny_gems = 42
-cheese_jumpers = 42
-blue_cheese = 42
-pebbles = 42
-sticks = 42
+shiny_gems = 1
+cheese_jumpers = 2
+blue_cheese = 3
+pebbles = 4
+sticks = 5
+log = 6
+ruby = 7
+leaf = 8
+carrot = 9
+potato = 10
+bread = 11
+brick = 12
+mouldyPotato = 13
+child = 14
+toyBear = 15
