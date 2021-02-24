@@ -9,7 +9,7 @@ import variables as Jvar
 
 # * API
 # Item Manager
-def newItem(access,displayName,icon,sellPrice,buyPrice,):
+def newItem(access,displayName,icon,sellPrice,buyPrice):
     # Display Name
     if access == 'displayName':
         print(displayName)

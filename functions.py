@@ -1,19 +1,29 @@
+###########################################
+#                                         #
+#       The Function List for JAGAC       #
+#                                         #
+###########################################
+
 # * Import Stuff
 import variables as Jvar
-import shopMenu as Jshop
 import itemAPI as Jitems
 import commandSystem as Jcommands
+import debugCommands as Dcommands
 import resources as Jres
 
 # * Functions
 # Commands
 def COMMAND_LIST(command):
+    # Normal Commands
     Jcommands.chelp(command)
     Jcommands.cversion(command)
     Jcommands.cbalance(command)
     Jcommands.cinventory(command)
     Jcommands.cshop(command)
     Jcommands.csettings(command)
+    # Debug Commands
+    Dcommands.cdebug(command)
+    Dcommands.caddResources(command)
     return
 
 # Items

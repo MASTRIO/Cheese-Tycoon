@@ -40,5 +40,4 @@ def caddResources(command):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Increased resources for all items by {}'.format(Jvar.DEBUG_INCREASE))
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-
     return

@@ -52,13 +52,16 @@ def cinventory(command):
 # Shop
 def cshop(command):
     if command == '/shop':
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('test')
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     return
 
 # Settings
 def csettings(command):
     if command == '/settings':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print('test')
         print('Opening Settings Menu!')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     return
