@@ -7,6 +7,7 @@
 # * Imports
 import variables as Jvar
 import functions as Jfunc
+import shop as Jshop
 
 # * Commands
 # Help
@@ -46,14 +47,6 @@ def cinventory(command):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Here is everything in your inventory:')
         Jfunc.ITEM_LIST('inventory')
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    return
-
-# Shop
-def cshop(command):
-    if command == '/shop':
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        print('test')
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     return
 

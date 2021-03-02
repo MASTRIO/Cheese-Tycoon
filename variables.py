@@ -1,14 +1,9 @@
 # Settings
 GUI_THEME = 'NeutralBlue'
 
-# Command Running
-CAN_RUN_MAIN_COMMANDS = True
-CAN_RUN_SELL_COMMANDS = False
-CAN_RUN_BUY_COMMANDS = False
-
-# Shop Menu
-CURRENT_SELL_COMMAND = 'none'
-SELL_ITEM = False
+# Shop
+SHOP_COMMAND_STARTING = False
+SHOP_COMMAND = 'e'
 AMOUNT_TO_SELL = 0
 
 # Item API
