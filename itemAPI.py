@@ -13,8 +13,8 @@ import resources as Jres
 def newItem(access,displayName,icon,sellPrice,buyPrice):
     # Sell
     if access == 'sell':
-        displayName.lower()
-        Jvar.SHOP_COMMAND_STARTING = Jvar.SHOP_COMMAND.startswith('/sell {}'.format(displayName))
+        Jvar.LOWERED_DISPLAY_NAME = displayName.lower()
+        Jvar.SHOP_COMMAND_STARTING = Jvar.CURRENT_SHOP_COMMAND.startswith('/sell {}'.format(Jvar.LOWERED_DISPLAY_NAME))
         if Jvar.SHOP_COMMAND_STARTING == True:
             Jvar.AMOUNT_TO_SELL = Jvar.CURRENT_SELL_COMMAND.strip('/ abcdefghijklmnopqrstuvwxyz')
             Jvar.AMOUNT_TO_SELL = int(Jvar.AMOUNT_TO_SELL, base=0)
@@ -34,4 +34,10 @@ def newItem(access,displayName,icon,sellPrice,buyPrice):
     if access == 'shop':
         if Jvar.LOADED_RESOURCE_AMOUNT > 0:
             print('[{}] {}')
+    # Convert data to int
+    if access == 'convertToInt':
+        Jvar.LOADED_RESOURCE_AMOUNT = int(Jvar.LOADED_RESOURCE_AMOUNT)
+    # Convert data to str
+    if access == 'convertToStr':
+        Jvar.LOADED_RESOURCE_AMOUNT = str(Jvar.LOADED_RESOURCE_AMOUNT)
     return

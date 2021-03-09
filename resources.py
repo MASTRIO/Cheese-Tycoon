@@ -1,19 +1,19 @@
 # Currency
-CHEESE = 50
+CHEESE = 0
 
 # Resources/Materials
-shiny_gems = 1
-cheese_jumpers = 2
-blue_cheese = 3
-pebbles = 4
-sticks = 5
-log = 6
-ruby = 7
-leaf = 8
-carrot = 9
-potato = 10
-bread = 11
-brick = 12
-mouldy_potato = 13
-child = 14
-toy_bear = 15
+shiny_gems = 0
+cheese_jumpers = 0
+blue_cheese = 0
+pebbles = 0
+sticks = 0
+log = 0
+ruby = 0
+leaf = 0
+carrot = 0
+potato = 0
+bread = 0
+brick = 0
+mouldy_potato = 0
+child = 0
+toy_bear = 0

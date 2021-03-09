@@ -20,7 +20,6 @@ def COMMAND_LIST(command):
     Jcommands.cversion(command)
     Jcommands.cbalance(command)
     Jcommands.cinventory(command)
-    Jcommands.cshop(command)
     Jcommands.csettings(command)
     # Shop Commands
     Scommands.chelp(command)

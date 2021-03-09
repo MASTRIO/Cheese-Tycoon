@@ -4,6 +4,8 @@ import time
 # Other Script Resources
 import variables as Jvar
 import functions as Jfunc
+import saveSystem as Jsave
+import resources as Jres
 
 # Set Theme
 sg.theme(Jvar.GUI_THEME)
@@ -21,13 +23,18 @@ layout1 = [
 # Opens Gui
 window1 = sg.Window('Just Another Game About Cheese', layout1)
 
+# Loads save data
+Jsave.loadSaveData()
+Jres.shiny_gems = 10
+
 # Runs when Gui is open
 while True:
     event, values = window1.read()
     # Runs when CLOSE is pressed
     if event in (sg.WIN_CLOSED, 'Save & Quit'):
-        print('Goodbye :(')
-        time.sleep(0.5)
+        print('Saving...')
+        Jsave.saveSaveData()
+        time.sleep(2)
         window1.close()
         break
     if event == 'Clear Output': 
