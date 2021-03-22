@@ -34,6 +34,9 @@ int convertTimesLoaded = 0;
 // Convert Loaded Data
 double multipliedInt = 1;
 std::string convertedValues;
+std::string whatToSave;
+double convertInputStr;
+bool isConvertingLoadedData = false;
 // Items
 double apples = 0;
 
@@ -67,14 +70,28 @@ void convertSaveData() {
 
 // Convert Loaded Data to Saveable String because ciursehgdrufyvjgsedjxfgbvkjezrsdxbgnvkurh ggvhgdkjghvrzkuydgverkjhgbdfjkxc
 void convertLoadedData() {
-    
-    
-    // End
-    multipliedInt = multipliedInt * 10;
+    while (isConvertingLoadedData = true) {
+        multipliedInt = multipliedInt * 10;
+    }
 }
 
 
 
+// * Save Loaded Data
+// Apples
+void saveDataApples() {
+    // Convert to saveable string or something idk
+    convertLoadedData();
+
+    // Save the stupid data already!
+    std::ofstream saveFiles("./data/item_apples.cheese");
+    saveFiles << whatToSave;
+    saveFiles.close();
+}
+
+
+
+// * Load Saved Data
 // Apples
 void loadDataApples() {
     std::string loadText;
@@ -137,10 +154,10 @@ void cSave() {
         std::cout << messageTypes[0] << "Saving game data\n";
         std::cout << messageTypes[2] << "Do not do anything while the game is saving, otherwise your save might get corrupted";
 
-        // Save apples
-        std::ofstream saveFiles("./data/item_apples.cheese");
-        saveFiles << "a\na\na\nb\nc";
-        saveFiles.close();
+        convertInputStr = apples;
+        saveDataApples();
+        apples = convertInputStr;
+
     }
     if (inputCommandStringArg1 == "load") {
         // OUTPUT
