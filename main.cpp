@@ -5,6 +5,7 @@
 #include <windows.h>
 #include <vector>
 #include <sys/stat.h>
+#include <algorithm>
 
 
 
@@ -24,21 +25,23 @@ std::string commandType;
 std::string inputCommandStringArg1;
 std::string inputCommandStringArg2;
 std::string inputCommandStringArg3;
-double inputCommandIntArg1;
+int inputCommandIntArg1;
 // Convert Save Data
-double convertInputInt;
-double convertMultiplier = 1;
+int convertInputInt;
+int convertMultiplier = 1;
 std::vector<std::string> convertList;
 int convertListData = 0;
 int convertTimesLoaded = 0;
 // Convert Loaded Data
-double multipliedInt = 1;
+int multipliedInt = 1;
 std::string convertedValues;
 std::string whatToSave;
-double convertInputStr;
+int convertInputStr;
 bool isConvertingLoadedData = false;
+std::vector<int> loadedDigits;
+int loadingNumber = 0;
 // Items
-double apples = 0;
+int apples = 0;
 
 
 
@@ -70,8 +73,20 @@ void convertSaveData() {
 
 // Convert Loaded Data to Saveable String because ciursehgdrufyvjgsedjxfgbvkjezrsdxbgnvkurh ggvhgdkjghvrzkuydgverkjhgbdfjkxc
 void convertLoadedData() {
-    while (isConvertingLoadedData = true) {
-        multipliedInt = multipliedInt * 10;
+    while (convertInputStr > 0) {
+        loadedDigits.push_back(convertInputStr % 10);
+        convertInputStr / 10;
+    }
+
+    reverse(loadedDigits.begin(), loadedDigits.end());
+
+    while (loadedDigits[loadingNumber]) {
+        std::cout << "test\n";
+
+        // Converting process pog
+        
+
+        loadingNumber++;
     }
 }
 
@@ -156,7 +171,6 @@ void cSave() {
 
         convertInputStr = apples;
         saveDataApples();
-        apples = convertInputStr;
 
     }
     if (inputCommandStringArg1 == "load") {
