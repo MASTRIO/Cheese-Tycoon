@@ -84,7 +84,7 @@ void convertLoadedData() {
         std::cout << "test\n";
 
         // Converting process pog
-        
+        std::cout << "idk why im here";
 
         loadingNumber++;
     }
