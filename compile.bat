@@ -1,3 +1,5 @@
-g++ main.cpp -o JAGAC
+@echo off
+
+g++ *.cpp -o JAGAC
 
 pause
