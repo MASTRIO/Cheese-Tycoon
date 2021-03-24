@@ -32,112 +32,45 @@ int convertMultiplier = 1;
 std::vector<std::string> convertList;
 int convertListData = 0;
 int convertTimesLoaded = 0;
-// Convert Loaded Data
-int multipliedInt = 1;
-std::string convertedValues;
-std::string whatToSave;
-int convertInputStr;
-bool isConvertingLoadedData = false;
-std::vector<int> loadedDigits;
-int loadingNumber = 0;
 // Items
 int apples = 0;
 
 
 
 //// * Functions
-// Convert Save Data to Usable Int because haha yes go brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-void convertSaveData() {
-    if (convertList[convertListData] == "a") {
-        convertInputInt = convertInputInt + (1 * convertMultiplier);
-    } else if (convertList[convertListData] == "b") {
-        convertInputInt = convertInputInt + (2 * convertMultiplier);
-    } else if (convertList[convertListData] == "c") {
-        convertInputInt = convertInputInt + (3 * convertMultiplier);
-    } else if (convertList[convertListData] == "d") {
-        convertInputInt = convertInputInt + (4 * convertMultiplier);
-    } else if (convertList[convertListData] == "e") {
-        convertInputInt = convertInputInt + (5 * convertMultiplier);
-    } else if (convertList[convertListData] == "f") {
-        convertInputInt = convertInputInt + (6 * convertMultiplier);
-    } else if (convertList[convertListData] == "g") {
-        convertInputInt = convertInputInt + (7 * convertMultiplier);
-    } else if (convertList[convertListData] == "h") {
-        convertInputInt = convertInputInt + (8 * convertMultiplier);
-    } else if (convertList[convertListData] == "i") {
-        convertInputInt = convertInputInt + (9 * convertMultiplier);
-    } else if (convertList[convertListData] == "j") {
-        convertInputInt = convertInputInt + (0 * convertMultiplier);
-    }
-}
-
-// Convert Loaded Data to Saveable String because ciursehgdrufyvjgsedjxfgbvkjezrsdxbgnvkurh ggvhgdkjghvrzkuydgverkjhgbdfjkxc
-void convertLoadedData() {
-    while (convertInputStr > 0) {
-        loadedDigits.push_back(convertInputStr % 10);
-        convertInputStr / 10;
-    }
-
-    reverse(loadedDigits.begin(), loadedDigits.end());
-
-    while (loadedDigits[loadingNumber]) {
-        std::cout << "test\n";
-
-        // Converting process pog
-        std::cout << "idk why im here";
-
-        loadingNumber++;
-    }
-}
-
-
-
-// * Save Loaded Data
-// Apples
+// TODO: Save Data
 void saveDataApples() {
-    // Convert to saveable string or something idk
-    convertLoadedData();
-
-    // Save the stupid data already!
     std::ofstream saveFiles("./data/item_apples.cheese");
-    saveFiles << whatToSave;
+    saveFiles << apples;
     saveFiles.close();
 }
 
 
 
-// * Load Saved Data
-// Apples
+// * Load Data
 void loadDataApples() {
-    std::string loadText;
-    std::ifstream loadFiles("./data/item_apples.cheese");
+    // Make the array
+    int arr[30];
+    std::ifstream is("data/item_apples.cheese");
+    int cnt= 0;
+    int x;
 
-    while (std::getline (loadFiles, loadText)) {
-        convertList.push_back(loadText);
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
 
-        convertSaveData();
+    // And that it can read the integer
+    arr[cnt++] = x;
 
-        std::cout << "\n" << messageTypes[3] << convertInputInt;
-
-        convertListData++;
-        convertMultiplier = convertMultiplier * 10;
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        apples = arr[i];
     }
 
-    loadFiles.close();
-}
+    // ! Outputs Data
+    std::cout << apples << "\n";
 
-
-
-// * Load Data Funky
-void loadData(std::string itemToLoad) {
-    convertMultiplier = 1;
-    convertListData = 0;
-
-    convertList.clear();
-
-    if (itemToLoad == "apples") {
-        loadDataApples();
-    }
+    // Close the file
+    is.close();
 }
 
 
@@ -167,9 +100,9 @@ void cSave() {
     if (inputCommandStringArg1 == "save") {
         // OUTPUT
         std::cout << messageTypes[0] << "Saving game data\n";
-        std::cout << messageTypes[2] << "Do not do anything while the game is saving, otherwise your save might get corrupted";
+        std::cout << messageTypes[2] << "Do not do anything while the game is saving, otherwise your save might get corrupted\n";
 
-        convertInputStr = apples;
+        // Save Data
         saveDataApples();
 
     }
@@ -178,11 +111,9 @@ void cSave() {
         std::cout << messageTypes[0] << "Loading game data\n";
         std::cout << messageTypes[2] << "Do not do anything while the game is loading save data, otherwise your save might get corrupted\n";
 
-        /// * Load Data
-        // Apples
-        convertInputInt = apples;
-        loadData("apples");
-        apples = convertInputInt;
+        // Load Data
+        loadDataApples();
+
     }
 }
 
