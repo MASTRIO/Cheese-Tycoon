@@ -5,6 +5,7 @@
 #include "saveData.h"
 #include "loadData.h"
 #include "resetData.h"
+#include "debug.h"
 
 //// * Variables
 // hrrrrrrrr
@@ -24,22 +25,26 @@ std::string inputCommandStringArg2;
 std::string inputCommandStringArg3;
 int inputCommandIntArg1;
 
+
+
 //// * Functions
+// Help
+void cHelp() {
+    // OUTPUT
+    std::cout << "Here is a list of Commands:\n";
+    std::cout << "Order: MAIN COMMAND | Argument 1 , Argument 2 , Argument 3\n";
+    std::cout << "  - help |\n";
+    std::cout << "  - save | save/load/reset\n";
+}
+
 // Debug
 void cDebug() {
-    // why
-        // Add
-        if (inputCommandStringArg1 == "add") {
-            // Apples
-            if (inputCommandStringArg2 == "apples") {
-                // OUTPUT
-                apples = apples + inputCommandIntArg1;
-    
-                std::cout << messageTypes[3] << "You got " << inputCommandIntArg1 << " apples\n";
-                std::cout << messageTypes[3] << "You now have " << apples << " apples";
-            }
-        }
+    // Add
+    if (inputCommandStringArg1 == "add") {
+        // OUTPUT
+        dIncreaseItem();
     }
+}
     
 // Save
 void cSave() {
@@ -52,7 +57,7 @@ void cSave() {
         std::cout << messageTypes[2] << "Do not do anything while the game is saving, otherwise your save might get corrupted\n";
     
         // Save Data
-        saveDataApples();
+        saveDataShinyGems();
 
     }
     // Load
@@ -62,7 +67,7 @@ void cSave() {
         std::cout << messageTypes[2] << "Do not do anything while the game is loading save data, otherwise your save might get corrupted\n";
 
         // Load Data
-        loadDataApples();
+        loadDataShinyGems();
 
     }
     // Reset

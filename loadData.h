@@ -3,11 +3,11 @@
 #include <fstream>
 
 //// * Functions
-// Apples
-void loadDataApples() {
+// Shiny Gems
+void loadDataShinyGems() {
     // Make the array
     int arr[30];
-    std::ifstream is("./jagac/item_apples.cheese");
+    std::ifstream is("./jagac/item_shiny_gems.cheese");
     int cnt= 0;
     int x;
 
@@ -19,11 +19,11 @@ void loadDataApples() {
 
     // Saves the Data
     for (int i = 0; i < cnt; i++) {
-        apples = arr[i];
+        shiny_gems = arr[i];
     }
 
     // ! Outputs Data
-    std::cout << apples << "\n";
+    std::cout << shiny_gems << "\n";
 
     // Close the file
     is.close();

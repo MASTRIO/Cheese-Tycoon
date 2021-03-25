@@ -3,9 +3,9 @@
 #include <fstream>
 
 //// * Functions
-// Apples
-void saveDataApples() {
-    std::ofstream saveFiles("./jagac/item_apples.cheese");
-    saveFiles << apples;
+// Shiny Gems
+void saveDataShinyGems() {
+    std::ofstream saveFiles("./jagac/item_shiny_gems.cheese");
+    saveFiles << shiny_gems;
     saveFiles.close();
 }

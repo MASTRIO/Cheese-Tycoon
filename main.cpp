@@ -19,6 +19,8 @@ void getCommandType() {
     } else if (commandType == "save") {
         std::cin >> inputCommandStringArg1;
         cSave();
+    } else if (commandType == "help") {
+        cHelp();
     }
 }
 
