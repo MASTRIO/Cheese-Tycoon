@@ -1,10 +1,28 @@
 //// * Include
 #include <iostream>
 // Import Scripts
-#include "variables.h"
 #include "resources.h"
 #include "saveData.h"
 #include "loadData.h"
+#include "resetData.h"
+
+//// * Variables
+// hrrrrrrrr
+bool gameRunning = true;
+// Message Type
+std::string messageTypes[4] = {
+    "[LOG] ",
+    "[ERR] ",
+    "[WARN] ",
+    "[DEBUG] "
+};
+// Command Type
+std::string commandType;
+// Command Inputs
+std::string inputCommandStringArg1;
+std::string inputCommandStringArg2;
+std::string inputCommandStringArg3;
+int inputCommandIntArg1;
 
 //// * Functions
 // Debug
@@ -37,6 +55,7 @@ void cSave() {
         saveDataApples();
 
     }
+    // Load
     if (inputCommandStringArg1 == "load") {
         // OUTPUT
         std::cout << messageTypes[0] << "Loading game data\n";
@@ -45,5 +64,19 @@ void cSave() {
         // Load Data
         loadDataApples();
 
+    }
+    // Reset
+    if (inputCommandStringArg1 == "reset") {
+        // OUTPUT
+        // Confirm Reset
+        std::cout << "Are you sure you want to reset ALL of your save data? (y/n)\n# ";
+        std::cin >> inputCommandStringArg1;
+        // Reset Data
+        if (inputCommandStringArg1 == "y") {
+            std::cout << "\nResetting Data";
+            resetData();
+        } else {
+            std::cout << "\nData Reset cancelled";
+        }
     }
 }

@@ -7,11 +7,7 @@
 #include <sys/stat.h>
 #include <algorithm>
 // Import
-#include "variables.h"
 #include "commands.h"
-#include "loadData.h"
-#include "saveData.h"
-#include "resources.h"
 
 //// * Functions
 // * Other Functions

@@ -1,9 +1,6 @@
 //// * Include
 #include <iostream>
 #include <fstream>
-// Import Scripts
-#include "variables.h"
-#include "resources.h"
 
 //// * Functions
 // Apples
