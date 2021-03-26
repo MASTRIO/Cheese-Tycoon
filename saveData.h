@@ -16,3 +16,10 @@ void saveDataCheeseJumpers() {
     saveFiles << cheese_jumpers;
     saveFiles.close();
 }
+
+// Blue Cheese
+void saveDataBlueCheese() {
+    std::ofstream saveFiles("./jagac/item_blue_cheese.cheese");
+    saveFiles << blue_cheese;
+    saveFiles.close();
+}

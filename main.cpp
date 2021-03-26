@@ -41,7 +41,7 @@ void typeInCommand() {
 // Main Function
 int main() {
     // Console Window Title
-    SetConsoleTitle( TEXT("Epic Game Pog"));
+    SetConsoleTitle( TEXT("Just Another Game About Cheese {Alpha v0.3}"));
 
     // Ask to type in command
     while (gameRunning == true) {

@@ -11,14 +11,18 @@ void dGetItemSet(std::string item) {
         shiny_gems = debugIncreaseInt;
     } else if (item == "cheese_jumpers") {
         cheese_jumpers = debugIncreaseInt;
+    } else if (item == "blue_cheese") {
+        blue_cheese = debugIncreaseInt;
     }
 }
 // Get Item to Increase
 void dGetIncreasedItem(std::string item) {
     if (item == "shiny_gems") {
         debugIncreaseInt = shiny_gems;
-    } if (item == "cheese_jumpers") {
+    } else if (item == "cheese_jumpers") {
         debugIncreaseInt = cheese_jumpers;
+    } else if (item == "blue_cheese") {
+        debugIncreaseInt = blue_cheese;
     }
 }
 // Increase Item

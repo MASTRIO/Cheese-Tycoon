@@ -8,7 +8,6 @@
 #include "debug.h"
 
 //// * Variables
-// hrrrrrrrr
 bool gameRunning = true;
 // Message Type
 std::string messageTypes[4] = {
@@ -49,12 +48,26 @@ void cDebug() {
         std::cout << messageTypes[3] << "You got " << inputCommandIntArg1 << " " << inputCommandStringArg2 << "\n";
         std::cout << messageTypes[3] << "You now have " << inputCommandIntArg1 << " " << inputCommandStringArg2;
     }
+    // Stop
+    if (inputCommandStringArg1 == "stop") {
+        // OUTPUT
+        // Are you sure?
+        std::cout << messageTypes[2] << "Are you sure you want to force stop the game? Your data will not be saved! (y/n)\n# ";
+        std::cin >> inputCommandStringArg2;
+        // yes or no
+        if (inputCommandStringArg2 == "y") {
+            std::cout << messageTypes[3] << "Force Closing game...";
+
+            gameRunning = false;
+        } else {
+            std::cout << messageTypes[3] << "Cancelling Force Close";
+        }
+    }
 }
 
 // Save
 void cSave() {
 // this is really overcomplicated and bad, oh well!
-    
     // Save
     if (inputCommandStringArg1 == "save") {
         // OUTPUT
@@ -64,6 +77,7 @@ void cSave() {
         // Save Data
         saveDataShinyGems();
         saveDataCheeseJumpers();
+        saveDataBlueCheese();
 
     }
     // Load
@@ -75,20 +89,21 @@ void cSave() {
         // Load Data
         loadDataShinyGems();
         loadDataCheeseJumpers();
+        loadDataBlueCheese();
 
     }
     // Reset
     if (inputCommandStringArg1 == "reset") {
         // OUTPUT
         // Confirm Reset
-        std::cout << "Are you sure you want to reset ALL of your save data? (y/n)\n# ";
+        std::cout << messageTypes[2] << "Are you sure you want to reset ALL of your save data? (y/n)\n# ";
         std::cin >> inputCommandStringArg1;
         // Reset Data
         if (inputCommandStringArg1 == "y") {
-            std::cout << "\nResetting Data";
+            std::cout << messageTypes[3] << "Resetting game data";
             resetData();
         } else {
-            std::cout << "\nData Reset cancelled";
+            std::cout << messageTypes[3] << "Data reset cancelled";
         }
     }
 }
