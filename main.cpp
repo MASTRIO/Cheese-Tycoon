@@ -6,8 +6,11 @@
 #include <vector>
 #include <sys/stat.h>
 #include <algorithm>
+#include <cstdlib>
 // Import
 #include "commands.h"
+
+// haha car go vroom vroom zoom drift skkrt brrrrrrr boom wooosh
 
 //// * Functions
 // * Other Functions
@@ -41,7 +44,7 @@ void typeInCommand() {
 // Main Function
 int main() {
     // Console Window Title
-    SetConsoleTitle( TEXT("Just Another Game About Cheese {Alpha v0.3}"));
+    SetConsoleTitle( TEXT("Just Another Game About Cheese {Alpha v0.4}"));
 
     // Ask to type in command
     while (gameRunning == true) {
