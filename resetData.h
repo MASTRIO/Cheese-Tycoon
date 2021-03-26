@@ -5,22 +5,22 @@
 // Reset Data
 void resetData() {
     // Currency
-    int cheese = 0;
+    cheese = 0;
 
     // Items
-    int shiny_gems = 0;
-    int cheese_jumpers = 0;
-    int blue_cheese = 0;
-    int pebbles = 0;
-    int sticks = 0;
-    int log = 0;
-    int ruby = 0;
-    int leaf = 0;
-    int carrot = 0;
-    int potato = 0;
-    int bread = 0;
-    int brick = 0;
-    int mouldy_potato = 0;
-    int child = 0;
-    int toy_bear = 0;
+    shiny_gems = 0;
+    cheese_jumpers = 0;
+    blue_cheese = 0;
+    pebbles = 0;
+    sticks = 0;
+    log = 0;
+    ruby = 0;
+    leaf = 0;
+    carrot = 0;
+    potato = 0;
+    bread = 0;
+    brick = 0;
+    mouldy_potato = 0;
+    child = 0;
+    toy_bear = 0;
 }

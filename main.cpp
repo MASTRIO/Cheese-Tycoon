@@ -14,7 +14,12 @@
 // Get Command Type
 void getCommandType() {
     if (commandType == "debug") {
-        std::cin >> inputCommandStringArg1 >> inputCommandStringArg2 >> inputCommandIntArg1;
+        std::cin >> inputCommandStringArg1;
+
+        if (inputCommandStringArg1 == "add") {
+            std::cin >> inputCommandStringArg2 >> inputCommandIntArg1;
+        }
+
         cDebug();
     } else if (commandType == "save") {
         std::cin >> inputCommandStringArg1;
@@ -26,11 +31,10 @@ void getCommandType() {
 
 // Input Command Function
 void typeInCommand() {
-// i don't like this
-    std::cout << "\n\n|What type of command would you like to run?| ";
+// pog
+    std::cout << "\n\n>>> ";
     std::cin >> commandType;
 
-    std::cout << ">>> ";
     getCommandType();
 }
 

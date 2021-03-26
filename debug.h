@@ -6,29 +6,29 @@ int debugIncreaseInt;
 
 //// * Functions
 // Get Item to Set
-void dGetItemSet() {
-    if (inputCommandStringArg2 == "shiny_gems") {
+void dGetItemSet(std::string item) {
+    if (item == "shiny_gems") {
         shiny_gems = debugIncreaseInt;
+    } else if (item == "cheese_jumpers") {
+        cheese_jumpers = debugIncreaseInt;
     }
 }
 // Get Item to Increase
-void dGetIncreasedItem() {
-    if (inputCommandStringArg2 == "shiny_gems") {
+void dGetIncreasedItem(std::string item) {
+    if (item == "shiny_gems") {
         debugIncreaseInt = shiny_gems;
+    } if (item == "cheese_jumpers") {
+        debugIncreaseInt = cheese_jumpers;
     }
 }
 // Increase Item
-void dIncreaseItem() {
+void dIncreaseItem(std::string item, int amount) {
     // Get Item
-    dGetIncreasedItem();
+    dGetIncreasedItem(item);
 
     // Increase Var
-    debugIncreaseInt = debugIncreaseInt + inputCommandIntArg1;
-    
-    // Send Message to Console
-    std::cout << messageTypes[3] << "You got " << inputCommandIntArg1 << " " << inputCommandStringArg2 << "\n";
-    std::cout << messageTypes[3] << "You now have " << debugIncreaseInt << " " << inputCommandStringArg2;
+    debugIncreaseInt = debugIncreaseInt + amount;
 
     // Get Item
-    dGetItemSet();
+    dGetItemSet(item);
 }

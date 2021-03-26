@@ -32,9 +32,10 @@ int inputCommandIntArg1;
 void cHelp() {
     // OUTPUT
     std::cout << "Here is a list of Commands:\n";
-    std::cout << "Order: MAIN COMMAND | Argument 1 , Argument 2 , Argument 3\n";
+    std::cout << "Order: Command | Argument 1 , Argument 2 , Argument 3\n";
     std::cout << "  - help |\n";
     std::cout << "  - save | save/load/reset\n";
+    std::cout << "  - debug | add, ITEM, AMOUNT";
 }
 
 // Debug
@@ -42,10 +43,14 @@ void cDebug() {
     // Add
     if (inputCommandStringArg1 == "add") {
         // OUTPUT
-        dIncreaseItem();
+        dIncreaseItem(inputCommandStringArg2, inputCommandIntArg1);
+
+        // Send Message to Console
+        std::cout << messageTypes[3] << "You got " << inputCommandIntArg1 << " " << inputCommandStringArg2 << "\n";
+        std::cout << messageTypes[3] << "You now have " << inputCommandIntArg1 << " " << inputCommandStringArg2;
     }
 }
-    
+
 // Save
 void cSave() {
 // this is really overcomplicated and bad, oh well!
@@ -58,6 +63,7 @@ void cSave() {
     
         // Save Data
         saveDataShinyGems();
+        saveDataCheeseJumpers();
 
     }
     // Load
@@ -68,6 +74,7 @@ void cSave() {
 
         // Load Data
         loadDataShinyGems();
+        loadDataCheeseJumpers();
 
     }
     // Reset
