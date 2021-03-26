@@ -6,10 +6,10 @@
 int cheese = 0;
 
 // Items
-int shiny_gems = 0;
-int cheese_jumpers = 0;
-int blue_cheese = 0;
-int pebbles = 0;
+int shiny_gems = 0; //
+int cheese_jumpers = 0; //
+int blue_cheese = 0; //
+int pebbles = 0; //
 int sticks = 0;
 int logs = 0;
 int ruby = 0;

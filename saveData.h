@@ -23,3 +23,38 @@ void saveDataBlueCheese() {
     saveFiles << blue_cheese;
     saveFiles.close();
 }
+
+// Pebbles
+void saveDataPebbles() {
+    std::ofstream saveFiles("./jagac/item_pebbles.cheese");
+    saveFiles << pebbles;
+    saveFiles.close();
+}
+
+// Sticks
+void saveDataSticks() {
+    std::ofstream saveFiles("./jagac/item_sticks.cheese");
+    saveFiles << sticks;
+    saveFiles.close();
+}
+
+// Logs
+void saveDataLogs() {
+    std::ofstream saveFiles("./jagac/item_logs.cheese");
+    saveFiles << logs;
+    saveFiles.close();
+}
+
+// Ruby
+void saveDataRuby() {
+    std::ofstream saveFiles("./jagac/item_ruby.cheese");
+    saveFiles << ruby;
+    saveFiles.close();
+}
+
+// Leaf
+void saveDataLeaf() {
+    std::ofstream saveFiles("./jagac/item_leaf.cheese");
+    saveFiles << leaf;
+    saveFiles.close();
+}

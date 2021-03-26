@@ -78,6 +78,11 @@ void cSave() {
         saveDataShinyGems();
         saveDataCheeseJumpers();
         saveDataBlueCheese();
+        saveDataPebbles();
+        saveDataSticks();
+        saveDataLogs();
+        saveDataRuby();
+        saveDataLeaf();
 
     }
     // Load
@@ -90,6 +95,11 @@ void cSave() {
         loadDataShinyGems();
         loadDataCheeseJumpers();
         loadDataBlueCheese();
+        loadDataPebbles();
+        loadDataSticks();
+        loadDataLogs();
+        loadDataRuby();
+        loadDataLeaf();
 
     }
     // Reset
