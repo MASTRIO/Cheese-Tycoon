@@ -3,6 +3,32 @@
 #include <fstream>
 
 //// * Functions
+// Cheese
+void loadDataCheese() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/currency_cheese.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        cheese = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << cheese << "\n";
+
+    // Close the file
+    is.close();
+}
+
 // Shiny Gems
 void loadDataShinyGems() {
     // Make the array
@@ -206,6 +232,214 @@ void loadDataLeaf() {
 
     // ! Outputs Data
     std::cout << leaf << "\n";
+
+    // Close the file
+    is.close();
+}
+
+// Carrots
+void loadDataCarrots() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/item_carrots.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        carrots = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << carrots << "\n";
+
+    // Close the file
+    is.close();
+}
+
+// Potato
+void loadDataPotato() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/item_potato.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        potato = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << potato << "\n";
+
+    // Close the file
+    is.close();
+}
+
+// Bread
+void loadDataBread() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/item_bread.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        bread = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << bread << "\n";
+
+    // Close the file
+    is.close();
+}
+
+// Brick
+void loadDataBrick() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/item_brick.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        brick = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << brick << "\n";
+
+    // Close the file
+    is.close();
+}
+
+// Mouldy Potato
+void loadDataMouldyPotato() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/item_mouldy_potato.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        mouldy_potato = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << mouldy_potato << "\n";
+
+    // Close the file
+    is.close();
+}
+
+// Child
+void loadDataChild() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/item_Child.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        child = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << child << "\n";
+
+    // Close the file
+    is.close();
+}
+
+// Toy Bear
+void loadDataToyBear() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/item_toy_bear.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        toy_bear = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << toy_bear << "\n";
+
+    // Close the file
+    is.close();
+}
+
+// Moose
+void loadDataMoose() {
+    // Make the array
+    int arr[30];
+    std::ifstream is("./jagac/item_moose.cheese");
+    int cnt= 0;
+    int x;
+
+    // Make sure the array isn't full
+    while (cnt < arr[30] && is >> x)
+
+    // And that it can read the integer
+    arr[cnt++] = x;
+
+    // Saves the Data
+    for (int i = 0; i < cnt; i++) {
+        moose = arr[i];
+    }
+
+    // ! Outputs Data
+    std::cout << moose << "\n";
 
     // Close the file
     is.close();

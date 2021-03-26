@@ -21,7 +21,7 @@ void getCommandType() {
         }
 
         cDebug();
-    } else if (commandType == "save") {
+    } else if (commandType == "game") {
         std::cin >> inputCommandStringArg1;
         cSave();
     } else if (commandType == "help") {

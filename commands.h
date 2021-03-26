@@ -75,6 +75,7 @@ void cSave() {
         std::cout << messageTypes[2] << "Do not do anything while the game is saving, otherwise your save might get corrupted\n";
     
         // Save Data
+        saveDataCheese();
         saveDataShinyGems();
         saveDataCheeseJumpers();
         saveDataBlueCheese();
@@ -83,6 +84,14 @@ void cSave() {
         saveDataLogs();
         saveDataRuby();
         saveDataLeaf();
+        saveDataCarrots();
+        saveDataPotato();
+        saveDataBread();
+        saveDataBrick();
+        saveDataMouldyPotato();
+        saveDataChild();
+        saveDataToyBear();
+        saveDataMoose();
 
     }
     // Load
@@ -92,6 +101,7 @@ void cSave() {
         std::cout << messageTypes[2] << "Do not do anything while the game is loading save data, otherwise your save might get corrupted\n";
 
         // Load Data
+        loadDataCheese();
         loadDataShinyGems();
         loadDataCheeseJumpers();
         loadDataBlueCheese();
@@ -100,6 +110,14 @@ void cSave() {
         loadDataLogs();
         loadDataRuby();
         loadDataLeaf();
+        loadDataCarrots();
+        loadDataPotato();
+        loadDataBread();
+        loadDataBrick();
+        loadDataMouldyPotato();
+        loadDataChild();
+        loadDataToyBear();
+        loadDataMoose();
 
     }
     // Reset
