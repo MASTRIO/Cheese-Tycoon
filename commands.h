@@ -1,5 +1,6 @@
 //// * Include
 #include <iostream>
+#include <direct.h>
 // Import Scripts
 #include "resources.h"
 #include "saveData.h"
@@ -14,8 +15,7 @@ std::string messageTypes[4] = {
     "[LOG] ",
     "[ERR] ",
     "[WARN] ",
-    "[DEBUG] "
-};
+    "[DEBUG] "};
 // Command Type
 std::string commandType;
 // Command Inputs
@@ -24,11 +24,10 @@ std::string inputCommandStringArg2;
 std::string inputCommandStringArg3;
 int inputCommandIntArg1;
 
-
-
 //// * Functions
 // Help
-void cHelp() {
+void cHelp()
+{
     // OUTPUT
     std::cout << "Here is a list of Commands:\n";
     std::cout << "Order: Command | Argument 1 , Argument 2 , Argument 3\n";
@@ -38,9 +37,11 @@ void cHelp() {
 }
 
 // Debug
-void cDebug() {
+void cDebug()
+{
     // Add
-    if (inputCommandStringArg1 == "add") {
+    if (inputCommandStringArg1 == "add")
+    {
         // OUTPUT
         dIncreaseItem(inputCommandStringArg2, inputCommandIntArg1);
 
@@ -49,31 +50,41 @@ void cDebug() {
         std::cout << messageTypes[3] << "You now have " << inputCommandIntArg1 << " " << inputCommandStringArg2;
     }
     // Stop
-    if (inputCommandStringArg1 == "stop") {
+    if (inputCommandStringArg1 == "stop")
+    {
         // OUTPUT
         // Are you sure?
         std::cout << messageTypes[2] << "Are you sure you want to force stop the game? Your data will not be saved! (y/n)\n# ";
         std::cin >> inputCommandStringArg2;
         // yes or no
-        if (inputCommandStringArg2 == "y") {
+        if (inputCommandStringArg2 == "y")
+        {
             std::cout << messageTypes[3] << "Force Closing game...";
 
             gameRunning = false;
-        } else {
+        }
+        else
+        {
             std::cout << messageTypes[3] << "Cancelling Force Close";
         }
     }
 }
 
 // Save
-void cSave() {
-// this is really overcomplicated and bad, oh well!
+void cSave()
+{
+    // this is really overcomplicated and bad, oh well!
     // Save
-    if (inputCommandStringArg1 == "save") {
+    if (inputCommandStringArg1 == "save")
+    {
+        // Make the directory
+        char *dirname = "jagac";
+        mkdir(dirname, 0);
+
         // OUTPUT
         std::cout << messageTypes[0] << "Saving game data\n";
         std::cout << messageTypes[2] << "Do not do anything while the game is saving, otherwise your save might get corrupted\n";
-    
+
         // Save Data
         saveDataCheese();
         saveDataShinyGems();
@@ -92,10 +103,10 @@ void cSave() {
         saveDataChild();
         saveDataToyBear();
         saveDataMoose();
-
     }
     // Load
-    if (inputCommandStringArg1 == "load") {
+    if (inputCommandStringArg1 == "load")
+    {
         // OUTPUT
         std::cout << messageTypes[0] << "Loading game data\n";
         std::cout << messageTypes[2] << "Do not do anything while the game is loading save data, otherwise your save might get corrupted\n";
@@ -118,19 +129,22 @@ void cSave() {
         loadDataChild();
         loadDataToyBear();
         loadDataMoose();
-
     }
     // Reset
-    if (inputCommandStringArg1 == "reset") {
+    if (inputCommandStringArg1 == "reset")
+    {
         // OUTPUT
         // Confirm Reset
         std::cout << messageTypes[2] << "Are you sure you want to reset ALL of your save data? (y/n)\n# ";
         std::cin >> inputCommandStringArg1;
         // Reset Data
-        if (inputCommandStringArg1 == "y") {
+        if (inputCommandStringArg1 == "y")
+        {
             std::cout << messageTypes[3] << "Resetting game data";
             resetData();
-        } else {
+        }
+        else
+        {
             std::cout << messageTypes[3] << "Data reset cancelled";
         }
     }

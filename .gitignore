@@ -130,3 +130,7 @@ dmypy.json
 /test.class
 /gui.class
 /no_why.class
+
+# C++ Stuff for game
+JAGAC.exe
+/jagac
