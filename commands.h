@@ -3,10 +3,9 @@
 #include <direct.h>
 // Import Scripts
 #include "resources.h"
-#include "saveData.h"
-#include "loadData.h"
-#include "resetData.h"
 #include "debug.h"
+#include "items.h"
+#include "resetData.h"
 
 //// * Variables
 bool gameRunning = true;
@@ -86,23 +85,8 @@ void cSave()
         std::cout << messageTypes[2] << "Do not do anything while the game is saving, otherwise your save might get corrupted\n";
 
         // Save Data
-        saveDataCheese();
-        saveDataShinyGems();
-        saveDataCheeseJumpers();
-        saveDataBlueCheese();
-        saveDataPebbles();
-        saveDataSticks();
-        saveDataLogs();
-        saveDataRuby();
-        saveDataLeaf();
-        saveDataCarrots();
-        saveDataPotato();
-        saveDataBread();
-        saveDataBrick();
-        saveDataMouldyPotato();
-        saveDataChild();
-        saveDataToyBear();
-        saveDataMoose();
+        saveData();
+
     }
     // Load
     if (inputCommandStringArg1 == "load")
@@ -112,23 +96,7 @@ void cSave()
         std::cout << messageTypes[2] << "Do not do anything while the game is loading save data, otherwise your save might get corrupted\n";
 
         // Load Data
-        loadDataCheese();
-        loadDataShinyGems();
-        loadDataCheeseJumpers();
-        loadDataBlueCheese();
-        loadDataPebbles();
-        loadDataSticks();
-        loadDataLogs();
-        loadDataRuby();
-        loadDataLeaf();
-        loadDataCarrots();
-        loadDataPotato();
-        loadDataBread();
-        loadDataBrick();
-        loadDataMouldyPotato();
-        loadDataChild();
-        loadDataToyBear();
-        loadDataMoose();
+        loadData();
     }
     // Reset
     if (inputCommandStringArg1 == "reset")
