@@ -1,36 +1,32 @@
 //// * Include
 #include <iostream>
-// * Import
-#include "items/item_shiny_gem.h"
-#include "items/item_cheese_jumpers.h"
-#include "items/item_blue_cheese.h"
-#include "items/item_pebbles.h"
-#include "items/item_sticks.h"
-#include "items/item_logs.h"
-#include "items/item_ruby.h"
-#include "items/item_leaf.h"
+#include <fstream>
+#include <string>
+
+//// * Classes
+// Creates a new Item
+class NewItem {
+public:
+    // * Variables
+    std::string itemName;
+    int sellPrice;
+    int buyPrice;
+    // * Functions
+    // Save Data
+    void saveItem() {
+        whereToSave(itemName);
+    }
+};
 
 //// * Functions
-// Save
-void saveData() {
-    saveDataShinyGems();
-    saveDataCheeseJumpers();
-    saveDataBlueCheese();
-    saveDataPebbles();
-    saveDataSticks();
-    saveDataLogs();
-    saveDataRuby();
-    saveDataLeaf();
+void whereToSave(std::string itemToSave) {
+    if (itemToSave == "shiny_gems") {
+        std::ofstream saveFiles("./jagac/item_shiny_gems.cheese");
+        saveFiles << shiny_gems;
+        saveFiles.close();
+    }
 }
 
-// Load
-void loadData() {
-    loadDataShinyGems();
-    loadDataCheeseJumpers();
-    loadDataBlueCheese();
-    loadDataPebbles();
-    loadDataSticks();
-    loadDataLogs();
-    loadDataRuby();
-    loadDataLeaf();
+void createItems() {
+    NewItem ShinyGems; ShinyGems.itemName = "shiny_gems"; ShinyGems.buyPrice = 0; ShinyGems.sellPrice = 0;
 }
