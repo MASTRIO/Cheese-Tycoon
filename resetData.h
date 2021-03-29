@@ -7,14 +7,14 @@ void resetData() {
     int cheese = 0;
 
     // Items
-    int shiny_gems = 0; //
-    int cheese_jumpers = 0; //
-    int blue_cheese = 0; //
-    int pebbles = 0; //
-    int sticks = 0; //
-    int logs = 0; //
-    int ruby = 0; //
-    int leaf = 0; //
+    int shiny_gems = 0;
+    int cheese_jumpers = 0;
+    int blue_cheese = 0;
+    int pebbles = 0;
+    int sticks = 0;
+    int logs = 0;
+    int ruby = 0;
+    int leaf = 0;
     int carrots = 0;
     int potato = 0;
     int bread = 0;

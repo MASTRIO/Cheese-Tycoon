@@ -4,17 +4,17 @@
 
 //// * Functions
 // Save Data
-void saveDataLog() {
-    std::ofstream saveFiles("./jagac/item_log.cheese");
-    saveFiles << log;
+void saveDataLogs() {
+    std::ofstream saveFiles("./jagac/item_logs.cheese");
+    saveFiles << logs;
     saveFiles.close();
 }
 
 // Load Data
-void loadDataLog() {
+void loadDataLogs() {
     // Make the array
     int arr[30];
-    std::ifstream is("./jagac/items_log.cheese");
+    std::ifstream is("./jagac/items_logs.cheese");
     int cnt= 0;
     int x;
 
@@ -26,11 +26,11 @@ void loadDataLog() {
 
     // Saves the Data
     for (int i = 0; i < cnt; i++) {
-        log = arr[i];
+        logs = arr[i];
     }
 
     // ! Outputs Data
-    std::cout << log << "\n";
+    std::cout << logs << "\n";
 
     // Close the file
     is.close();

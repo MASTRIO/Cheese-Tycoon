@@ -6,7 +6,7 @@
 #include "items/item_blue_cheese.h"
 #include "items/item_pebbles.h"
 #include "items/item_sticks.h"
-#include "items/item_log.h"
+#include "items/item_logs.h"
 #include "items/item_ruby.h"
 #include "items/item_leaf.h"
 
@@ -18,7 +18,7 @@ void saveData() {
     saveDataBlueCheese();
     saveDataPebbles();
     saveDataSticks();
-    saveDataLog();
+    saveDataLogs();
     saveDataRuby();
     saveDataLeaf();
 }
@@ -30,7 +30,7 @@ void loadData() {
     loadDataBlueCheese();
     loadDataPebbles();
     loadDataSticks();
-    loadDataLog();
+    loadDataLogs();
     loadDataRuby();
     loadDataLeaf();
 }
