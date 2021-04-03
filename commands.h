@@ -85,7 +85,7 @@ void cSave()
         std::cout << messageTypes[2] << "Do not do anything while the game is saving, otherwise your save might get corrupted\n";
 
         // Save Data
-        saveData();
+        //saveData();
 
     }
     // Load
@@ -96,7 +96,7 @@ void cSave()
         std::cout << messageTypes[2] << "Do not do anything while the game is loading save data, otherwise your save might get corrupted\n";
 
         // Load Data
-        loadData();
+        //loadData();
     }
     // Reset
     if (inputCommandStringArg1 == "reset")

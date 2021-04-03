@@ -25,12 +25,13 @@ public:
 
 //// * Functions
 // Where To Save
-void whereToSave(std::string itemToSave) {
+std::string whereToSave(std::string itemToSave) {
     if (itemToSave == "shiny_gems") {
         std::ofstream saveFiles("./jagac/item_shiny_gems.cheese");
         saveFiles << shiny_gems;
         saveFiles.close();
     }
+    return;
 }
 // Where To Load
 void whatToLoad(std::string itemToLoad) {
