@@ -1,4 +1,4 @@
-# JAGAC
+# JAGAC (OLD)
  Idk I tried making a game in python :/
  
  **Oh yay I'm remaking the game for the third time but now in C++**
