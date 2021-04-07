@@ -1,15 +1,13 @@
 // Package
 package me.MASTRIO.JustAnotherGameAboutCheese;
 
-// Import
-
 // Main Class
 class Main {
 
   // Variables
   static int[] version = {
     0,  // Major
-    1,  // Minor
+    4,  // Minor
     0   // Patch
   };
   static int maxRan = 10;
@@ -45,7 +43,7 @@ class Main {
       splashText = "Yo you got splash text 10!";
     }
 
-    title = "JAGAC v" + version[0] + "." + version[1] + "." + version[2] + " - " + splashText;
+    title = "JAGAC v" + version[0] + "." + version[1] + "." + version[2] + " | " + splashText;
 
     // Call the 'makeUI' method
     UI gui = new UI();
