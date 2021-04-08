@@ -33,7 +33,7 @@ public class ItemAPI {
       if (CommandCompiler.commandArgs[1].equals(code_name)) {
 
         // OUTPUT
-        sellOutput = "You sold " + CommandCompiler.commandArgs[2] + " " + icon + "\nFor " + ((Integer.getInteger(CommandCompiler.commandArgs[2]) * sellPrice));
+        sellOutput = "You sold " + CommandCompiler.commandArgs[2] + " " + icon + " For " + (Integer.parseInt(CommandCompiler.commandArgs[2]) * sellPrice + " 🧀");
 
       }
 
