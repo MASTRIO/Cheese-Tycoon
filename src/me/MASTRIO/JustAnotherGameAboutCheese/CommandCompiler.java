@@ -19,6 +19,8 @@ public class CommandCompiler {
     CommandList.cInventory();
     CommandList.cBalance();
     CommandList.cSell();
+    CommandList.cBuy();
+    CommandList.cHelp();
 
   }
 

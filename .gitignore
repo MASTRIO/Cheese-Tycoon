@@ -134,3 +134,6 @@ dmypy.json
 # C++ Stuff for game
 JAGAC.exe
 /jagac
+
+# Java Stuff for game
+/out

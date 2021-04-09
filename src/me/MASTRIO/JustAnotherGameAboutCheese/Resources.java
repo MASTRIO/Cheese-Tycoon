@@ -6,7 +6,7 @@ public class Resources {
 
   // Currency
   static int[] currency = {
-    0
+    100
   };
 
   // Items

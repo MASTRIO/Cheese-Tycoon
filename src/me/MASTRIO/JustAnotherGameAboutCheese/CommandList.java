@@ -50,4 +50,32 @@ public class CommandList {
 
   }
 
+  // Buy Command Method
+  public static void cBuy() {
+
+    // Sell
+    if (CommandCompiler.commandArgs[0].equals("buy")) {
+
+      // OUTPUT
+      ItemAPI.defineItems("buy");
+
+      UI.outputText("Buying " + CommandCompiler.commandArgs[2] + " " + CommandCompiler.commandArgs[1], ItemAPI.sellOutput);
+
+    }
+
+  }
+
+  // Help Command Method
+  public static void cHelp() {
+
+    // Help
+    if (CommandCompiler.commandArgs[0].equals("help")) {
+
+      // OUTPUT
+      UI.outputText("Showing the user the command options", "> help    (Shows this list)\n> balance   (Shows your money)\n> inventory    (Shows your inventory)\n> sell <item> <amount>   (Sell your items)\n> buy <item> <amount>   (Buy items)");
+
+    }
+
+  }
+
 }
