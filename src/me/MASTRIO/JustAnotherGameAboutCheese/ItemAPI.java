@@ -13,6 +13,21 @@ public class ItemAPI {
 
     newItem(accessType, "shiny_gems", "Shiny Gems", 0, "✨💎", 10, 15);
     newItem(accessType, "cheese_jumpers", "Cheese Jumpers", 1, "🧀🥋", 40, 45);
+    newItem(accessType, "blue_cheese", "Blue Cheese", 2, "Ƀ🧀", 95, 100);
+    newItem(accessType, "pebbles", "Pebbles", 3, "⭖", 5, 10);
+    newItem(accessType, "sticks", "Sticks", 4, "/", 5, 10);
+    newItem(accessType, "logs", "Logs", 5, "⍃", 15, 20);
+    newItem(accessType, "rubys", "Rubys", 6, "я💎", 25, 30);
+    newItem(accessType, "leaves", "Leaves", 7, "🍁", 5, 10);
+    newItem(accessType, "carrots", "Carrots", 8, "🥕", 10, 15);
+    newItem(accessType, "potatoes", "Potatoes", 9, "🥔", 10, 15);
+    newItem(accessType, "bread", "Bread", 10, "🍞", 15, 20);
+    newItem(accessType, "bricks", "Bricks", 11, "🧱", 10, 15);
+    newItem(accessType, "mouldy_potatoes", "Mouldy Potatoes", 12, "☠🥔", 15, 20);
+    newItem(accessType, "child", "Child", 13, "🚼", 35, 40);
+    newItem(accessType, "toy_bears", "Toy Bears", 14, "🧸", 15, 20);
+    newItem(accessType, "moose", "Moose", 15, "🐎", 25, 30);
+
 
   }
 
@@ -66,6 +81,12 @@ public class ItemAPI {
 
       }
 
+    }
+    // Save
+    if (accessType.equals("save")) {
+
+      // OUTPUT
+      CommandList.saveInfo = CommandList.saveInfo + Resources.items[id] + "\n";
 
     }
 
