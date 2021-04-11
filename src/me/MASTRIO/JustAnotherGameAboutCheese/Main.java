@@ -6,9 +6,9 @@ class Main {
 
   // Variables
   static int[] version = {
-    0,  // Major
-    4,  // Minor
-    0   // Patch
+    0, // Major
+    4, // Minor
+    0 // Patch
   };
   static int maxRan = 10;
   static int minRan = 1;
@@ -48,6 +48,16 @@ class Main {
     // Call the 'makeUI' method
     UI gui = new UI();
     gui.makeUI();
+
+    // Load game data
+    CommandCompiler.commandArgs = new String[]{
+      "data",
+      "load"
+    };
+    CommandList.cData();
+
+    // Welcomes the user
+    UI.outputText("Welcome back to the game", "Just Another Game About Cheese\nv" + version[0] + "." + version[1] + "." + version[2]);
 
   }
 

@@ -137,4 +137,4 @@ JAGAC.exe
 
 # Java Stuff for game
 /out
-saveData.cheese
+/jagac.save

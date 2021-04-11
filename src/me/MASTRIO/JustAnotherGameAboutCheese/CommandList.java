@@ -84,7 +84,7 @@ public class CommandList {
     if (CommandCompiler.commandArgs[0].equals("help")) {
 
       // OUTPUT
-      UI.outputText("Showing the user the command options", "> help    (Shows this list)\n> balance   (Shows your money)\n> inventory    (Shows your inventory)\n> sell <item> <amount>   (Sell your items)\n> buy <item> <amount>   (Buy items)");
+      UI.outputText("Showing the user the command options", "> help    (Shows this list)\n> balance   (Shows your money)\n> inventory    (Shows your inventory)\n> sell <item> <amount>   (Sell your items)\n> buy <item> <amount>   (Buy items)\n> data <save/load>   (Saves/loads game data)\n> bank <idk>  (Info)");
 
     }
 
@@ -103,7 +103,7 @@ public class CommandList {
         // Create save file
         try {
 
-          File saveFiles = new File("saveData.cheese");
+          File saveFiles = new File("jagac.save");
 
           if (saveFiles.createNewFile()) {
 
@@ -126,7 +126,7 @@ public class CommandList {
         try {
 
           ItemAPI.defineItems("save");
-          FileWriter saveData = new FileWriter("saveData.cheese");
+          FileWriter saveData = new FileWriter("jagac.save");
           saveData.write(Resources.currency[0] + "\n" + saveInfo);
           saveData.close();
           saveOutput = saveOutput + "\n> Saved the data";
@@ -150,7 +150,7 @@ public class CommandList {
 
         try {
 
-          File saveFiles = new File("saveData.cheese");
+          File saveFiles = new File("jagac.save");
           Scanner saveReader = new Scanner(saveFiles);
 
           while (saveReader.hasNextLine()) {
@@ -180,6 +180,39 @@ public class CommandList {
           e.printStackTrace();
 
         }
+
+      }
+
+    }
+
+  }
+
+  // Bank Command Method
+  public static void cBank() {
+
+    // TODO: Save Data
+    // TODO: View bank multiplier stats sub-command
+
+    // Bank
+    if (CommandCompiler.commandArgs[0].equals("bank")) {
+
+      // Add
+      if (CommandCompiler.commandArgs[1].equals("add")) {
+
+        // OUTPUT
+        if (Resources.items[2] < Integer.parseInt(CommandCompiler.commandArgs[2])) {
+
+          // Number to big (like your mum)
+          CommandCompiler.commandArgs[2] = String.valueOf(Resources.items[2]);
+
+        }
+
+        // Do the Math
+        Resources.bank[0] = Resources.bank[0] + Integer.parseInt(CommandCompiler.commandArgs[2]);
+        Resources.items[2] = Resources.items[2] - Integer.parseInt(CommandCompiler.commandArgs[2]);
+
+        // Tell the user what's happening
+        UI.outputText("Added Blue Cheese to Bank", "Added " + CommandCompiler.commandArgs[2] + " Ƀ🧀 to the bank\nYou now have " + Resources.bank[0] + " Ƀ🧀 in the bank");
 
       }
 

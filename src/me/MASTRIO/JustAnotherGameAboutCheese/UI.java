@@ -13,10 +13,13 @@ public class UI implements ActionListener {
 
   // Variables
   static String command;
-  static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
-  static LocalDateTime now = LocalDateTime.now();
+  static DateTimeFormatter time = DateTimeFormatter.ofPattern("HH:mm:ss");
+  static LocalDateTime localTime = LocalDateTime.now();
+  static DateTimeFormatter hour = DateTimeFormatter.ofPattern("HH");
+  static DateTimeFormatter minute = DateTimeFormatter.ofPattern("mm");
+  static DateTimeFormatter second = DateTimeFormatter.ofPattern("ss");
 
-  // Create UI variables
+  // UI variables
   static JTextArea outputPane;
   static JTextField commandInputBox;
   static JButton runCommandButton;
@@ -75,7 +78,7 @@ public class UI implements ActionListener {
 
     UI.outputPane.setText(CommandCompiler.border + "\n" + output + "\n" + CommandCompiler.border);
 
-    System.out.println("[" + (dtf.format(now)) + " | CommandOutput]@>>> " + consoleMessage);
+    System.out.println("[" + (time.format(localTime)) + " | CommandOutput]@>>> " + consoleMessage);
 
 
   }

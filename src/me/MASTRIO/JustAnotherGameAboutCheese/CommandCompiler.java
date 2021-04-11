@@ -22,6 +22,7 @@ public class CommandCompiler {
     CommandList.cBuy();
     CommandList.cHelp();
     CommandList.cData();
+    CommandList.cBank();
 
   }
 
