@@ -5,14 +5,14 @@ package me.MASTRIO.JustAnotherGameAboutCheese;
 public class Resources {
 
   // Bank
-  static int[] bank = {
-    0,
-    0
+  static double[] bank = {
+    0, // Blue Cheese in Bank
+    0.0 // Multiplier
   };
 
   // Currency
   static int[] currency = {
-    0
+    0 // Cheese
   };
 
   // Items

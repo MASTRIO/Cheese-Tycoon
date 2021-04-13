@@ -191,7 +191,6 @@ public class CommandList {
   public static void cBank() {
 
     // TODO: Save Data
-    // TODO: View bank multiplier stats sub-command
 
     // Bank
     if (CommandCompiler.commandArgs[0].equals("bank")) {
@@ -213,6 +212,13 @@ public class CommandList {
 
         // Tell the user what's happening
         UI.outputText("Added Blue Cheese to Bank", "Added " + CommandCompiler.commandArgs[2] + " Ƀ🧀 to the bank\nYou now have " + Resources.bank[0] + " Ƀ🧀 in the bank");
+
+      }
+      // Stats
+      if (CommandCompiler.commandArgs[1].equals("stats")) {
+
+        // OUTPUT
+        UI.outputText("Showing bank stats", "You have " +  (int) Resources.bank[0] + " Ƀ🧀 in the bank\nThis gives you a " + Resources.bank[1] + " Bank Multiplier");
 
       }
 
